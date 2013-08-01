@@ -1,79 +1,340 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta name="viewport" content="width=device-width, initial-scale=0.8"/>
+    <link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ace.min.css">
+    <link rel="stylesheet" href="css/ace-responsive.min.css">
+    <link rel="stylesheet" href="css/ace-skins.min.css">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Website : Website of MQuotient" />
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    </style>
+    <link rel="stylesheet" media="screen" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" media="screen" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,400,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
+    <script src="js/jquery.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/underscore.js"></script>
+		<script src="js/application.js"></script>
+		<title>MQuotient</title>
+		<!--[if IE]>
+			<link rel="stylesheet" type="text/css" href="css/all-ie-only.css" />
+		<![endif]-->
+	</head>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+	<body lang="en">
+		<div id="container">
+			<section id="cover">
+				<div class="wrapper">
+					<div id="covercontainer">
+						<h1><span class="m">m</span><span class="q">quotient</span></h1>
+						<div class="navcontainer">
+							<ul>
+								<li><a class="goTo" href="#about">About Us</a></li>
+								<li><a class="goTo" href="#products">Products</a></li>
+								<li><a class="goTo" href="#team">Team</a></li>
+								<li><a class="goTo" href="#careers">Careers</a></li>
+								<li><a class="goTo" href="#contactus">Contact Us</a></li>
+							</ul>
+						</div>
+						<!-- <center><p>We builds software to enhance  business processes with a view to improving service quality and reducing costs.</p></center> -->
+					</div>
+				</div>
+			</section>
 
-    <title>Website</title>
-  </head>
+			<section id="about">
+				<div class="wrapper">
+					<div id="aboutcontainer">
+						<div class="container-fluid">
+				      <div class="row-fluid">
+			            <div class="span6">
+			            	<h1>About <span class="secondary">Us</span></h1>
+			            </div>
 
-  <body>
+				          <div class="span6 page-txt">
+			              <p>
+			              	Normally we cannot stop talking about ourselves, just ask our employees and our customers.  But our web site designer says we have just this one page to the same. So here we go...
+			              </p>
+										<p>
+											We eat, drink and sleep products.  We are working on some amazing products in our labs which we think will change the world, or at least some parts of it.  We are based out of Pune, and would love to meet you in person.  So drop by our office for a cup of coffee, a slice of pizza and some of the geekiest chit chat
+										</p>
+										<p>
+											Or if you too busy, scroll down
+										</p>
+				          </div>
+				      </div>
+				    </div>
+					</div>
+				</div>
+				<div class="down"><a href="#products"><img width="32" height="32" src="img/arrow.png" title="Products"/></a></div>
+			</section>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/mquotient/website">View on GitHub</a>
+			<section id="products">
+				<div class="wrapper">
+					<div id="productscontainer">
+						<div class="container-fluid">
+							<h1>Products</h1>
+							<br>
+							<div id="this-carousel-id" class="carousel slide">
+				        <div class="carousel-inner">
+				          <div class="item active">
+				            <a class="carousel-anchor">  <img src="img/glyfix.jpg" />
+				            </a>
+				            <div class="carousel-caption">
+				              <h4>Glyfix</h4>
+				              <p>
+				              	Glyphfix is an artificial intelligence based OCR (Optical Character Recognition) & ICR (Intelligent Character Recognition) technology to convert physical handwritten forms/characters to the desired digital format with a very high level of accuracy, with self-teaching algorithms to continually improve fidelity. 
+				              </p>
+				            </div>
+				          </div>
+				          <div class="item">
+				            <a class="carousel-anchor">
+				              <img src="img/lms.jpg"/>
+				            </a>
+				            <div class="carousel-caption">
+				              <h4>LMS</h4>
+				              <p>
+				              	LMS is an integrated marketing and sales platform to record, organize, action, analyze and report customer data to enable enterprises to drive profits from multi-channel marketing programs.
+											</p>
+				            </div>
+				          </div>
+				        </div>
+			          <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
+			          <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
+				      </div>
+						</div>
+					</div>
+				</div>
+				<div class="down"><a href="#team"><img width="32" height="32" src="img/arrow.png" title="Team" /></a></div>
+			</section>
 
-          <h1 id="project_title">Website</h1>
-          <h2 id="project_tagline">Website of MQuotient</h2>
+			<section id="team">
+				<div class="wrapper">
+					<div id="teamcontainer">
+						<div class="container-fluid">
+	            <div class="employees-group">
+	            	<h1>Team</h1>
+	            	<hr>
+	            </div>
+						</div>
+					</div>
+				</div>
+				<div class="down"><a href="#careers"><img width="32" height="32" src="img/arrow.png" title="Careers" /></a></div>
+			</section>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/mquotient/website/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/mquotient/website/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+			<section id="careers">
+				<div class="wrapper">
+					<div id="careerscontainer">
+						<div class="container-fluid">
+							<h1>Want to join Us?</h1>
+							<br><br>
+			        <h4>About Us</h4>
+			        <br>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+			        <p> We're looking for developers who love working on multiple challenges simultaneously. Whether it's server-side Python web application code, front-end GUI development, or data crunching and analysis in SQL, every day brings a new set of interesting problems to solve and technologies to explore.</p>
+							<br>
+			        <p> Just about everything that we do here is important and you will be required to make great decisions without much supervision. We work without hierarchies, with mutually earned respect and pizza slices on a first come first serve basis.</p>
+			        
+			        <br><br>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+			        <h4>About You</h4>
+			        <br>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+			        <p> 
+			          <ul class="unstyled spaced">
+			            <li><i class="icon-ok"></i> Bachelor's degree in Computer Science or equivalent work experience required.</li>
+			            <li><i class="icon-ok"></i> Extremely strong fundamental understanding of data structures and algorithms.</li>
+			            <li><i class="icon-ok"></i> Strong coding abilities, preferably in multiple languages on UNIX systems (Python experience a huge plus!)</li>
+			            <li><i class="icon-ok"></i> Ability to be flexible and adaptable in a fast-paced startup environment.</li>
+			            <li><i class="icon-ok"></i> Strong desire to learn about new technologies and systems.</li>
+		            </ul>
+			        </p>
+			        
+			        <br><br>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+			        <h4>How much do we pay?</h4>
+			        <br>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+			        <p> Quite well, but really it depends upon how good you are and yes, your compensation does includes meaningful equity ownership </p>
+			        
+			        <br><br>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+			        <h4>Sounds like you?</h4>
+			        <br>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+			        <p> Then take a few minutes to describe your approach and share samples of some recent work you're proud of. Your resume is required too. 
+			        Email us at careers@mquotient.net </p>
+			    </div>
+					</div>
+				</div>
+				<div class="down"><a href="#contactus"><img width="32" height="32" src="img/arrow.png" title="Contact Us" /></a></div>
+			</section>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+			<section id="contactus">
+				<div class="wrapper">
+					<div id="contactuscontainer">
+						<div class="container-fluid">
+							<div class="row-fluid">
+								<div class="span4 img-polaroid custom-image-polaroid">
+									<address>
+										<strong><span class="m">m</span><span class="q">quotient</span> Solutions Limited</strong>
+			
+										<br>
+										407/ Building 2, 
+										<br>
+										Gera Gardens Condominium,
+										<br>
+										7-A Koregaon Park,
+										<br>
+										North Main Road, 
+										<br>
+										Pune - 411001
+										<br>
+										Landmark: St. Mira College
+										<br>
+										<span>P:</span>
+										+ 91 (020) 4120 4763
+									</address>
+									<br>
+									<address>
+										<strong>Mail us @</strong>
+										<br>
+										<a href="mailto:info@mquotient.net">info@mquotient</span>.net</a>
+									</address>
+								</div>
+								<div class="span8 img-polaroid custom-image-polaroid">
+									<h1>Contact Us</h1>
+									<form class="form-horizontal">
+										<div class="control-group">
+											<label class="control-label" for="form-field-1">Your Name</label>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+											<div class="controls">
+												<input type="text" id="form-field-1" placeholder="Name" />
+											</div>
+										</div>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+										<div class="control-group">
+											<label class="control-label" for="form-field-2">Your Email Address</label>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+											<div class="controls">
+												<input type="text" id="form-field-2" placeholder="Email Address" />
+											</div>
+										</div>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
+										<div class="control-group">
+											<label class="control-label" for="form-field-3">Subject</label>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Website maintained by <a href="https://github.com/mquotient">mquotient</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+											<div class="controls">
+												<input type="text" id="form-field-3" placeholder="Subject" />
+											</div>
+										</div>
 
-    
+										<div class="control-group">
+											<label class="control-label" for="form-field-4">Message</label>
 
-  </body>
+											<div class="controls">
+												<textarea id="form-field-4" rows="10" class="autosize-transition span12 message-textarea" placeholder="Your Message"></textarea>
+											</div>
+										</div>
+										<div class="control-group">
+											<div class="controls">
+												<button class="btn btn-light pull-right btn-submit" type="button">
+
+													Submit
+												</button>
+											</div>
+										</div>
+									</form>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<script id="employeesTemplate" type="text/template">
+				<div class="row-fluid">
+					<!-- For loop start -->
+					<%_.forEach(employees, function (employee) {%>
+					<div class="span3 center profile-template">
+					  <center>
+					  	<div class="custom-profile">
+						  	<div class="custom-profile-image-div">
+					      	<img class="custom-profile-image" alt="<%=employee.name%>'s Avatar" id="avatar2" src="<%=employee.imgSource%>">
+					      </div>
+
+					      <div class="custom-profile-info">
+					        	<p><b><%=employee.name%> <%=employee.sirname%></b></p>
+										<p>
+					          	<%=employee.position%>
+					          </p>
+					          <div class="space-4"></div>
+					          <p>
+					          	<a href="<%=employee.linkedin%>">
+					            	<img width="32" height="32" src="img/linkedin.png" alt="linkedin Account">
+					          	</a>
+													
+					          	<a href="<%=employee.twitter%>">
+					            	<img width="32" height="32" src="img/twitter.png" alt="twitter Account">
+					          	</a>
+
+					          	<%if (employee.github) {%>
+					          	<a href="<%=employee.github%>">
+					            	<img width="32" height="32" src="img/github.png" alt="github Account">
+					          	</a>
+					          	<%}%>
+					        	</p>
+					      </div>
+						  </div>
+					  </center>
+					</div><!--/span-->
+					<%});%>
+				</div>
+			</script>
+			<script src="js/employees.js"></script>
+			
+      <script>
+      	$.each(employees, function(){
+					$('.employees-group').append(_.template($('#employeesTemplate').html(), {employees: this}));
+      	});
+      </script>
+		</div>
+
+		<div id="footer">
+			<div class="navcontainer">
+				<ul>
+					<li><a class="goTo" href="#cover" data-id="cover">Home</a></li>
+					<li><a class="goTo" href="#about" data-id="about">About Us</a></li>
+					<li><a class="goTo" href="#products" data-id="products">Products</a></li>
+					<li><a class="goTo" href="#team" data-id="team">Team</a></li>
+					<li><a class="goTo" href="#careers" data-id="careers">Careers</a></li>
+					<li><a class="goTo" href="#contactus" data-id="contactus">Contact Us</a></li>
+				</ul>
+			</div>
+		</div>
+
+		
+		
+	</body>
 </html>
