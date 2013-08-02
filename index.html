@@ -5,9 +5,6 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 		<meta name="viewport" content="width=device-width, initial-scale=0.8"/>
     <link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/ace.min.css">
-    <link rel="stylesheet" href="css/ace-responsive.min.css">
-    <link rel="stylesheet" href="css/ace-skins.min.css">
     <style type="text/css">
       body {
         padding-top: 60px;
@@ -27,11 +24,8 @@
       }
     </style>
     <link rel="stylesheet" media="screen" href="css/bootstrap-responsive.min.css">
-    <link rel="stylesheet" media="screen" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/main.css"/>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,400,300' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
     <script src="js/jquery.js"></script>
 		<script src="js/bootstrap.js"></script>
 		<script src="js/underscore.js"></script>
@@ -162,11 +156,11 @@
 
 			        <p> 
 			          <ul class="unstyled spaced">
-			            <li><i class="icon-ok"></i> Bachelor's degree in Computer Science or equivalent work experience required.</li>
-			            <li><i class="icon-ok"></i> Extremely strong fundamental understanding of data structures and algorithms.</li>
-			            <li><i class="icon-ok"></i> Strong coding abilities, preferably in multiple languages on UNIX systems (Python experience a huge plus!)</li>
-			            <li><i class="icon-ok"></i> Ability to be flexible and adaptable in a fast-paced startup environment.</li>
-			            <li><i class="icon-ok"></i> Strong desire to learn about new technologies and systems.</li>
+			            <li><i class="icon-ok icon-white"></i> Bachelor's degree in Computer Science or equivalent work experience required.</li>
+			            <li><i class="icon-ok icon-white"></i> Extremely strong fundamental understanding of data structures and algorithms.</li>
+			            <li><i class="icon-ok icon-white"></i> Strong coding abilities, preferably in multiple languages on UNIX systems (Python experience a huge plus!)</li>
+			            <li><i class="icon-ok icon-white"></i> Ability to be flexible and adaptable in a fast-paced startup environment.</li>
+			            <li><i class="icon-ok icon-white"></i> Strong desire to learn about new technologies and systems.</li>
 		            </ul>
 			        </p>
 			        
@@ -193,36 +187,46 @@
 			<section id="contactus">
 				<div class="wrapper">
 					<div id="contactuscontainer">
+
 						<div class="container-fluid">
 							<div class="row-fluid">
-								<div class="span4 img-polaroid custom-image-polaroid">
-									<address>
-										<strong><span class="m">m</span><span class="q">quotient</span> Solutions Limited</strong>
-			
+								<div class="span4 custom-span">
+									<div class="img-polaroid custom-image-polaroid">
+										<address>
+											<strong><span class="m">m</span><span class="q">quotient</span> Solutions Limited</strong>
+				
+											<br>
+											407/ Building 2, 
+											<br>
+											Gera Gardens Condominium,
+											<br>
+											7-A Koregaon Park,
+											<br>
+											North Main Road, 
+											<br>
+											Pune - 411001
+											<br>
+											Landmark: St. Mira College
+											<br>
+											<span>P:</span>
+											+ 91 (020) 4120 4763
+											<br>
+											<a target="_blank" href="http://maps.google.com/maps?ll=18.535611,73.885682&amp;z=18&amp;t=m&amp;hl=en&amp;mapclient=apiv3" title="Click to see this area on Google Maps"> View it on Map </a>
+										</address>
 										<br>
-										407/ Building 2, 
-										<br>
-										Gera Gardens Condominium,
-										<br>
-										7-A Koregaon Park,
-										<br>
-										North Main Road, 
-										<br>
-										Pune - 411001
-										<br>
-										Landmark: St. Mira College
-										<br>
-										<span>P:</span>
-										+ 91 (020) 4120 4763
-									</address>
+										<address>
+											<strong>Mail us @</strong>
+											<br>
+											<a href="mailto:info@mquotient.net">info@mquotient</span>.net</a>
+										</address>
+										
+									</div>
 									<br>
-									<address>
-										<strong>Mail us @</strong>
-										<br>
-										<a href="mailto:info@mquotient.net">info@mquotient</span>.net</a>
-									</address>
+									<div class="img-polaroid custom-img-polaroid">
+										<div id="map" class="container-fluid" style="height:400px;"></div>
+									</div>
 								</div>
-								<div class="span8 img-polaroid custom-image-polaroid">
+								<div class="span8 img-polaroid custom-image-polaroid custom-span">
 									<h1>Contact Us</h1>
 									<form class="form-horizontal">
 										<div class="control-group">
@@ -269,6 +273,7 @@
 								</div>
 							</div>
 						</div>
+						<!-- <div id="map" class="container-fluid" style="height:400px;"></div> -->
 					</div>
 				</div>
 			</section>
@@ -289,7 +294,7 @@
 										<p>
 					          	<%=employee.position%>
 					          </p>
-					          <div class="space-4"></div>
+					          <br>
 					          <p>
 					          	<a href="<%=employee.linkedin%>">
 					            	<img width="32" height="32" src="img/linkedin.png" alt="linkedin Account">

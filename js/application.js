@@ -15,7 +15,7 @@ function resizePages() {
 	var bodyFontSize = $('body').css('font-size').slice(0,2),
 		mquotientFontSize = bodyFontSize * 8;
 	$('#covercontainer h1').css('padding-top',sectionHeight/2 - (mquotientFontSize * 1.3));
-	$('#covercontainer .navcontainer').css('padding-top',sectionHeight/2);
+	$('#covercontainer .navcontainer').css('padding-top',sectionHeight/2 + 10);
 
 	// Flip Images height and width
 	$('.front .pad').each(function () {
@@ -29,8 +29,12 @@ function resizePages() {
 			$frontPad.height($backPad.height());
 			$(this).closest('.custom-profile').height($backPad.height());
 		}
-
 	});
+
+	// Contact Us adjustment for bigger screen
+	if($(window).width() >= 768) {
+		$('.span8.custom-span').height($('.span4.custom-span').height()-32);
+	}
 }
 
 
@@ -102,34 +106,29 @@ $(document).ready(function() {
 			$('#footer a:last').addClass('active').parent().addClass('active');	
 		}
     }, 300));
-    
 });
 
+// Load Google Maps
+function initialize() {
+	var ourLocation = new google.maps.LatLng(18.53585,73.885988);
+	var mapOptions = {
+		zoom: 13,
+		center: ourLocation,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	}
+	var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+	
+	var marker = new google.maps.Marker({
+		map:map,
+		position: ourLocation
+	});
+}
 
+function loadScript() {
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAFWFw3Rdf7fBuvwo4DTUV2DcTD5W7tBWc&sensor=true&callback=initialize";
+  document.body.appendChild(script);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+window.onload = loadScript;
