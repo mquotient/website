@@ -71,7 +71,7 @@
 	-o-transition: .15s all linear;
 	-ms-transition: .15s all linear;
 	transition: .15s all linear;
-	font-size: 1em;
+	font-size: 1.1em;
 }
 
 #cover .navcontainer ul li a:hover {
@@ -118,7 +118,6 @@
 #about h1,
 #productscontainer h1,
 #careerscontainer h1 {
-	font-family: 'Conv_MYRIADPRO-SEMIBOLD', 'Open Sans', sans-serif;
 	font-weight: 400;
 }
 
@@ -242,10 +241,10 @@ custom-profile-image-div,.custom-profile-image {
 }
 
 /* Placeholders */
-::-webkit-input-placeholder { font-family: 'Conv_MYRIADPRO-SEMIBOLD' ,'Open Sans', sans-serif; font-size: small }
-::-moz-placeholder { font-family: 'Conv_MYRIADPRO-SEMIBOLD' ,'Open Sans', sans-serif; font-size: small } /* firefox 19+ */
-:-ms-input-placeholder { font-family: 'Conv_MYRIADPRO-SEMIBOLD' ,'Open Sans', sans-serif; font-size: small } /* ie */
-input:-moz-placeholder { font-family: 'Conv_MYRIADPRO-SEMIBOLD' ,'Open Sans', sans-serif; font-size: small }
+::-webkit-input-placeholder { font-family: 'Conv_MYRIADPRO-SEMIBOLD' , sans-serif; font-size: small }
+::-moz-placeholder { font-family: 'Conv_MYRIADPRO-SEMIBOLD' , sans-serif; font-size: small } /* firefox 19+ */
+:-ms-input-placeholder { font-family: 'Conv_MYRIADPRO-SEMIBOLD', sans-serif; font-size: small } /* ie */
+input:-moz-placeholder { font-family: 'Conv_MYRIADPRO-SEMIBOLD', sans-serif; font-size: small }
 
 /*Responsive Css*/
 @media (max-width: 479px) {

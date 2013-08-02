@@ -106,6 +106,9 @@ $(document).ready(function() {
 			$('#footer a:last').addClass('active').parent().addClass('active');	
 		}
     }, 300));
+
+	
+    
 });
 
 // Load Google Maps
