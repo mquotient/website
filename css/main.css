@@ -93,10 +93,16 @@
 	text-shadow: rgb(51, 51, 51) 0px -2px 0px;
 }
 
+#short-aboutus p {
+	margin-top: 30px;
+	color: white;
+	font-size: 1.2em;
+}
+
 .page-txt {
 	font-size: 1.3em;
 	line-height: 1.5;
-	color: #748B96;
+	color: white;
 }
 
 .page-txt p {
@@ -109,7 +115,7 @@
 
 #about h1 {
 	text-align: right;
-	color: #748B96;
+	color: white;
 	font-size: 5em;
 	margin-top: 5px;
 }
@@ -134,38 +140,82 @@
 }
 
 .social-icon {
-	width: 32px;
-	height: 32px;
+	-webkit-transition: .1s all;
+	-moz-transition: .1s all;
+	-ms-transition: .1s all;
+	-o-transition: .1s all;
+	transition: .1s all;
+}
+
+.social-icon:hover {
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 #team h1,
 #contactuscontainer h1 {
-	color: rgb(83, 83, 83);
 	font-weight: 400;
 }
 
+#team h1,
+#products h1,
+#careers h1 {
+	text-align: center;
+}
+
+#team h1 {
+	color: #f3f3f3;
+}
+
+#contactuscontainer address a {
+	text-decoration: underline;
+}
+
+#contactuscontainer .span4 {
+	text-align: center;
+	color: #CACACA;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#logo-span {
+	font-size: 4em;
+	font-weight: 400;
+	line-height: 1em;
+	font-family: 'trebuc', sans-serif;
+	color: #CACACA;
+}
+
 #contactus .wrapper {
-	padding: 40px 10px 0;
+	padding: 40px 0 0;
+}
+
+#map img{
+	max-width: none;
+}
+
+.map-container {
+	border-top: 1px solid rgba(0, 0, 0, 0.14);
+	box-shadow: 0 0 3px rgba(37, 37, 37, 0.25);
 }
 
 .custom-span {
 	margin-bottom: 20px 
 }
 
-#productscontainer h1, #careerscontainer h4 {
-	color: rgb(231, 231, 231);
+#productscontainer h1,
+#careerscontainer h1 {
+	color: rgb(80, 80, 80);
 	font-weight: 400;
 }
 
 #careerscontainer p,
 #careerscontainer li,
 #careerscontainer i {
-	color: #E7E7E7;
+	color: #242424;
 	font-size: 1.2em;
-}
-
-#careerscontainer h1 {
-	color: rgb(213, 213, 213);
 }
 
 #careerscontainer p {
@@ -185,11 +235,12 @@
 }
 
 .custom-profile {
-	background-color: #eff0f2;
+	background-color: #f3f3f3;
 	-webkit-box-shadow: 0 0 3px 2px rgba(0,0,0, 0.2);
 	box-shadow: 0 0 3px 2px rgba(0,0,0, 0.2);
 	margin-bottom: 15px;
-	max-width: 300px;
+	max-width: 200px;
+	opacity: .9;
 }
 
 custom-profile-image-div,.custom-profile-image {
@@ -198,6 +249,10 @@ custom-profile-image-div,.custom-profile-image {
 
 .custom-profile-info {
 	padding: 10px;
+}
+
+.social-info {
+	margin-top: 5px;
 }
 
 .carousel-anchor,.carousel-anchor img {
@@ -233,11 +288,9 @@ custom-profile-image-div,.custom-profile-image {
 	padding: 1px 4px 1px 3px;
 }
 
-#team,#cover {
-	background-color: #fff;
-	-webkit-box-shadow: 0px 0px 5px #FFFFFF;
-	box-shadow: 0px 0px 5px #FFFFFF;
-	z-index: 4;
+#team .wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 .img-polaroid.custom-image-polaroid {
@@ -245,10 +298,10 @@ custom-profile-image-div,.custom-profile-image {
 }
 
 /* Placeholders */
-::-webkit-input-placeholder { font-family: 'Conv_MYRIADPRO-SEMIBOLD' , sans-serif; font-size: small }
-::-moz-placeholder { font-family: 'Conv_MYRIADPRO-SEMIBOLD' , sans-serif; font-size: small } /* firefox 19+ */
-:-ms-input-placeholder { font-family: 'Conv_MYRIADPRO-SEMIBOLD', sans-serif; font-size: small } /* ie */
-input:-moz-placeholder { font-family: 'Conv_MYRIADPRO-SEMIBOLD', sans-serif; font-size: small }
+::-webkit-input-placeholder { font-family: 'Open Sans' , sans-serif; font-size: small }
+::-moz-placeholder { font-family: 'Open Sans' , sans-serif; font-size: small } /* firefox 19+ */
+:-ms-input-placeholder { font-family: 'Open Sans', sans-serif; font-size: small } /* ie */
+input:-moz-placeholder { font-family: 'Open Sans', sans-serif; font-size: small }
 
 /*Responsive Css*/
 @media (max-width: 479px) {
@@ -272,5 +325,21 @@ input:-moz-placeholder { font-family: 'Conv_MYRIADPRO-SEMIBOLD', sans-serif; fon
 @media (min-width: 526px) and (max-width: 767px) {
 	body {
 		font-size: 12px;
+	}
+}
+
+@media (max-width: 670px) {
+	[class*="span"],.uneditable-input[class*="span"],.row-fluid [class*="span"]{display:block;float:none;width:100%;margin-left:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+}
+
+@media (min-width: 1200px) {
+	#contactus .span4 {
+		padding-top: 40px;
+	}
+}
+
+@media (min-width: 1200px) {
+	#contactuscontainer .span4 {
+		padding-top: 60px;
 	}
 }

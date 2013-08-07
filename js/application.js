@@ -7,8 +7,12 @@ function resizePages() {
 	// Each sections height
 	$('section#cover').css('height',sectionHeight);
 	$('section').css('min-height',sectionHeight);
-	$('.wrapper').each(function () {
+	$('.wrapper:not(:last-child)').each(function () {
 		$(this).css('min-height',$(this).closest('section').height() - 100);
+	});
+
+	$('.wrapper:last-child').each(function () {
+		$(this).css('min-height',$(this).closest('section').height());
 	});
 
 	// Home Page height adjust
@@ -35,6 +39,10 @@ function resizePages() {
 	if($(window).width() >= 768) {
 		$('.span8.custom-span').height($('.span4.custom-span').height()-32);
 	}
+
+	// Make map full of height
+	var $contactUsContainer = $('#contactuscontainer');
+	$('#map').height($('#map').height() + $contactUsContainer.parent().height() - $contactUsContainer.height() - 24);
 }
 
 
@@ -124,6 +132,43 @@ function initialize() {
 	var marker = new google.maps.Marker({
 		map:map,
 		position: ourLocation
+	});
+
+	var contentString = '<div>'+
+		'<address>' +
+		'	<strong><span class="m">m</span><span class="q">quotient</span></strong>' +
+		'	<br>' +
+		'	407/ Building 2, ' +
+		'	<br>' +
+		'	Gera Gardens Condominium,' +
+		'	<br>' +
+		'	7-A Koregaon Park,' +
+		'	<br>' +
+		'	North Main Road, ' +
+		'	<br>' +
+		'	Pune - 411001' +
+		'	<br>' +
+		'	Landmark: St. Mira College' +
+		'	<br>' +
+		'	<span>P:</span>' +
+		'	+ 91 (020) 4120 4763' +
+		'	<br>' +
+		'	<a target="_blank" href="http://maps.google.com/maps?ll=18.535611,73.885682&amp;z=18&amp;t=m&amp;hl=en&amp;mapclient=apiv3" title="Click to see this area on Google Maps"><i class="icon-map-marker" style="vertical-align: sub;margin-left: -3px;"></i> View it on Map </a>' +
+		'</address>' +
+		'</div>';
+
+	var infowindow = new google.maps.InfoWindow({
+		content: contentString
+	});
+
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.open(map,marker);
+	});
+
+	google.maps.event.addListenerOnce(map, 'idle', function(){
+		$('.gmnoprint:last').remove();
+		$('.gmnoprint:first').remove();
+		$('.gmnoprint:first').remove();
 	});
 }
 
