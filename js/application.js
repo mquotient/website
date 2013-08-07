@@ -72,10 +72,50 @@ $(document).ready(function() {
 		});
 	});
 
+	var handle,
+		counter = 0,
+		$navItem = $('.nav-item'),
+		$navItemReverse = $($navItem.toArray().reverse());
+
+	function showItem(){
+	  if (counter < $navItem.length) {
+	    $navItem.eq(counter).addClass('shown');
+	    counter++;
+	  } else {
+	    window.clearInterval(handle);
+	    counter = 0;
+	  }
+	}
+
+	function hideItem(){
+	  if (counter < $navItem.length) {
+	    $navItemReverse.eq(counter).removeClass('shown');
+	    counter++;
+	  } else {
+	    window.clearInterval(handle);
+	    counter = 0;
+	  }
+	}
+	
+	$('.menu-btn').click(function() {
+		if($navItem.first().hasClass('shown')) {
+			handle = window.setInterval(hideItem, 10);
+			// $navItem.each(function () {
+			// 	$(this).css('left','200px').removeClass('shown');
+			// });
+		}
+		else {
+			handle = window.setInterval(showItem, 10);
+			// $navItem.each(function () {
+			// 	$(this).css('left','0px').addClass('shown');
+			// });
+		}
+	});
+
 	//resize
-	$(window).resize(_.throttle(function(e) {
+	$(window).resize(function(e) {
 		resizePages();
-	}));
+	});
 
 	resizePages();
 
