@@ -56,11 +56,12 @@
 	margin-top: -1px;
 	border-radius: 0;
 	background: #eee;
-	line-height: 20px;
-	width: 100px;
+	width: 150px;
+	font-size: 1.4em;
 }
 
 #floating-menu .btn.nav-item {
+	line-height: 32px;
 	position: relative;
 	left: 200px;
 	-webkit-transition: .3s all;
@@ -75,8 +76,30 @@
 }
 
 #floating-menu .menu-btn {
-	line-height: 24px;
-	width: 24px;
+	height: 32px;
+	width: 32px;
+	padding: 3px;
+	cursor: pointer;
+}
+
+
+#floating-menu .menu-image {
+	vertical-align:middle;
+    display:inline-block;
+    width:32px;
+    height:32px;
+}
+
+#floating-menu .menu-image {
+    background-image: url(../img/menu-border.png);
+}
+
+#floating-menu .menu-image.active {
+    background-image: none;
+	outline: 0;
+	-webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+	-moz-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+	box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
 }
 
 .navcontainer ul {
@@ -362,7 +385,7 @@ input:-moz-placeholder { font-family: 'Open Sans', sans-serif; font-size: small 
 
 @media (max-width: 525px) and (min-width: 480px) {
 	body {
-		font-size: 11px;
+		font-size: 11px;		
 	}
 }
 

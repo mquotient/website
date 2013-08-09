@@ -99,16 +99,16 @@ $(document).ready(function() {
 	
 	$('.menu-btn').click(function() {
 		if($navItem.first().hasClass('shown')) {
-			handle = window.setInterval(hideItem, 10);
-			// $navItem.each(function () {
-			// 	$(this).css('left','200px').removeClass('shown');
-			// });
+			// handle = window.setInterval(hideItem, 10);
+			$navItem.each(function () {
+				$(this).css('left','200px').removeClass('shown');
+			});
 		}
 		else {
-			handle = window.setInterval(showItem, 10);
-			// $navItem.each(function () {
-			// 	$(this).css('left','0px').addClass('shown');
-			// });
+			// handle = window.setInterval(showItem, 10);
+			$navItem.each(function () {
+				$(this).css('left','0px').addClass('shown');
+			});
 		}
 	});
 
