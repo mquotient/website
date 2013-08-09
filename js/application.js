@@ -116,14 +116,21 @@ $(document).ready(function() {
 				top: 0
 			});
 
-			$("#floating-menu").fadeIn();
+			if($(window).width() <= 768) {
+				$("#floating-menu").fadeIn();
+			}
+
 		}
 		else {
-			$('#footer').css({
-				opacity: 0,
-				top: -30
-			});
-			$("#floating-menu").fadeOut();
+			if($(window).width() <= 768) {
+				$("#floating-menu").fadeOut();
+			}
+			else {
+				$('#footer').css({
+					opacity: 0,
+					top: -30
+				});
+			}			
 		}
 
 		$('section:not(:last)').each(function () {
