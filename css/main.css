@@ -50,29 +50,55 @@
 	position: fixed;
 	top: 10px;
 	right: 10px;
+	width: 100px;
+}
+
+#floating-menu > div {
+	margin-left: 20px;
 }
 
 #floating-menu .btn {
 	margin-top: -1px;
 	border-radius: 0;
-	background: #eee;
-	width: 150px;
 	font-size: 1.4em;
+	background-color: #f8f8f8;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#f8f8f8),to(#f1f1f1));
+	background-image: -webkit-linear-gradient(top,#f8f8f8,#f1f1f1);
+	background-image: linear-gradient(top,#f8f8f8,#f1f1f1);
+	border: 1px solid #c6c6c6;
+}
+
+#floating-menu .btn:hover {
+	background-position: 0;
 }
 
 #floating-menu .btn.nav-item {
 	line-height: 32px;
 	position: relative;
-	left: 200px;
 	-webkit-transition: .3s all;
 	-moz-transition: .3s all;
 	-ms-transition: .3s all;
 	-o-transition: .3s all;
 	transition: .3s all;
+	-webkit-transform-origin: 100% 0%;
+	-moz-transform-origin: 100% 0%;
+	-o-transform-origin: 100% 0%;
+	-ms-transform-origin: 100% 0%;
+	transform-origin: 100% 0%;
+
+	-webkit-transform:  rotateY(90deg);
+	-moz-transform:  rotateY(90deg);
+	-o-transform:  rotateY(90deg);
+	-ms-transform:  rotateY(90deg);
+	transform:  rotateY(90deg);
 }
 
 #floating-menu .btn.nav-item.shown {
-	left: 0px;
+	-webkit-transform:  rotateY(0deg);
+	-moz-transform:  rotateY(0deg);
+	-o-transform:  rotateY(0deg);
+	-ms-transform:  rotateY(0deg);
+	transform:  rotateY(0deg);
 }
 
 #floating-menu .menu-btn {
@@ -80,6 +106,7 @@
 	width: 32px;
 	padding: 3px;
 	cursor: pointer;
+	display: block;
 }
 
 
@@ -92,6 +119,7 @@
 
 #floating-menu .menu-image {
     background-image: url(../img/menu-border.png);
+    opacity: .7;
 }
 
 #floating-menu .menu-image.active {
@@ -297,7 +325,6 @@
 	box-shadow: 0 0 3px 2px rgba(0,0,0, 0.2);
 	margin-bottom: 15px;
 	max-width: 200px;
-	opacity: .9;
 }
 
 custom-profile-image-div,.custom-profile-image {
