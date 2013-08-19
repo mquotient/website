@@ -8,4 +8,8 @@ var employees = [
 		{ "name": "Yati", "sirname": "Sagade", "position": "Software Engineer", "imgSource": "img/profiles/yati.JPG", "linkedin": "http://www.linkedin.com/in/yatisagade", "twitter": "https://twitter.com/yati_itay", "github": "http://github.com/yati-mq"}, 
 		{ "name": "Haridas", "sirname": "", "position": "Software Engineer", "imgSource": "img/profiles/haridas.JPG", "linkedin": "http://www.linkedin.com/in/haridasNarayanaSwamy", "twitter": "http://twitter.com/haridasNarayanaSwamy", "github": "http://github.com/haridas-mq"},
 		{ "name": "Sandesh", "sirname": "Damkondwar", "position": "Front End Web Developer", "imgSource": "img/profiles/sandesh.JPG", "linkedin": "http://www.linkedin.com/in/sandeshdamkondwar", "twitter": "http://twitter.com/sandydamy", "github": "http://github.com/sandeshdamkondwar"},
-		{ "name": "Vijisha", "sirname": "Vijaya", "position": "HR Manager", "imgSource": "img/profiles/vijisha.JPG", "linkedin": "http://www.linkedin.com/in/vijishavijaya", "twitter": "http://twitter.com/vijishavijaya"}]];
+		{ "name": "Vijisha", "sirname": "Vijaya", "position": "HR Manager", "imgSource": "img/profiles/vijisha.JPG", "linkedin": "http://www.linkedin.com/in/vijishavijaya", "twitter": "http://twitter.com/vijishavijaya"}],
+	[	
+		{ "name": "Sreejith", "sirname": "Ramakrishnan", "position": "Associate Software Engineer", "imgSource": "img/profiles/jr-sreejith.jpg", "linkedin": "http://www.linkedin.com/pub/sreejith-ramakrishnan/30/16b/a24", "twitter": "http://twitter.com/locomunkey", "github": "http://github.com/rsreejith-mq"},
+	]
+];
