@@ -27,14 +27,17 @@ function resizePages() {
 	$('#map').height($('#map').height() + $contactUsContainer.parent().height() - $contactUsContainer.height());
 }
 
-$(window).load(function () {
+$(window).load(function() {
 	// Make content of each section vertically center
-	$('section:not(:first,:last)').each(function(){
+	$('.card').height($('.custom-profile-image').height());
+
+	$('section:not(:first,:last, #team, #about)').each(function(){
 		var remainingSpace = $('#' + this.id + ' .wrapper').height() - $('#' + this.id + 'container').height(),
 			marginTop = remainingSpace / 2;
 
 			$('#' + this.id + 'container').css('margin-top', marginTop + 'px');
 	});
+
 });
 
 $(document).ready(function() {

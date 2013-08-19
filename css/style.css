@@ -8,11 +8,14 @@
   font-style: normal;
 }
 
-/*Site by Chris Driscoll, dribbble.com/chrisddriscoll*/
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,a,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,figure,footer,header,hgroup,nav,section,firstSection,credits,menu,time,mark,audio,video,canvas {
   margin: 0;
   padding: 0;
   border: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
 }
 
 html {
@@ -289,13 +292,13 @@ border-radius: 4px;
   letter-spacing: -4px;
 }
 
-#about,
+#products,
 #team,
 #contactus {
   background-color: #CC0E3F;
 }
 
-#products,
+#about,
 #careers {
   background-color: #fff;
 }

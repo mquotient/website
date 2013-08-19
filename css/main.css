@@ -187,7 +187,9 @@
 .page-txt {
 	font-size: 1.3em;
 	line-height: 1.5;
-	color: white;
+	color: black;
+	text-align: justify;
+	margin-top: 20px;
 }
 
 .page-txt p {
@@ -199,9 +201,9 @@
 }
 
 #about h1 {
-	text-align: right;
-	color: white;
-	font-size: 5em;
+	text-align: center;
+	color: black;
+	font-size: 4em;
 	line-height: 1em;
 	margin-top: 5px;
 }
@@ -261,7 +263,7 @@
 
 #contactuscontainer .span4 {
 	text-align: center;
-	color: #CACACA;
+	color: #fff;
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
@@ -271,7 +273,7 @@
 	font-weight: 400;
 	line-height: 1em;
 	font-family: 'trebuc', sans-serif;
-	color: #CACACA;
+	color: #fff;
 }
 
 #contactus .wrapper {
@@ -291,25 +293,26 @@
 	margin-bottom: 20px 
 }
 
-#productscontainer h1,
+#productscontainer h1 {
+	color: white;
+	font-weight: 400;
+}
+
 #careerscontainer h1 {
-	color: rgb(80, 80, 80);
+	color: black;
 	font-weight: 400;
 }
 
 #careerscontainer p,
-#careerscontainer li,
 #careerscontainer i {
 	color: #242424;
 	font-size: 1.2em;
 }
 
-#careerscontainer p {
-	text-indent: 20px;
-}
-
 #careerscontainer i {
 	margin-right: 10px;
+	vertical-align: baseline;
+	opacity: 0.7;
 }
 
 #productscontainer {
@@ -320,10 +323,10 @@
 	font-weight: 400;
 }
 
-.custom-profile {
+.card {
 	background-color: #f3f3f3;
-	-webkit-box-shadow: 0 0 3px 2px rgba(0,0,0, 0.2);
-	box-shadow: 0 0 3px 2px rgba(0,0,0, 0.2);
+	-webkit-box-shadow: 0px 0px 3px 0 rgba(0, 0,0,0.4);
+	box-shadow: 0px 0px 3px 0 rgba(0, 0,0,0.4);
 	margin-bottom: 15px;
 	max-width: 200px;
 }
@@ -332,8 +335,21 @@ custom-profile-image-div,.custom-profile-image {
 	width: 100%;
 }
 
+.profile-info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
 .custom-profile-info {
 	padding: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	height: 100%;
 }
 
 .social-info {
@@ -380,6 +396,26 @@ custom-profile-image-div,.custom-profile-image {
 
 .img-polaroid.custom-image-polaroid {
 	padding: 15px;
+}
+
+#careerscontainer li {
+	margin-left: 20px;
+}
+
+#careerscontainer .unstyled li {
+	margin-left: 0;
+}
+
+#careerscontainer .small {
+	font-size: 1em;
+}
+
+.apply-button {
+	height: 30px;
+}
+
+.apply-button .btn {
+	font-family: "Open Sans", "sans-serif";	
 }
 
 /* Placeholders */
@@ -432,4 +468,13 @@ input:-moz-placeholder { font-family: 'Open Sans', sans-serif; font-size: small 
 	#contactuscontainer .span4 {
 		padding-top: 60px;
 	}
+}
+
+.saperator {
+	content: '';
+	background: url("/img/separator.png") center center no-repeat;
+	display: block;
+	margin: 0 auto;
+	height: 30px;
+	margin-top: 30px;
 }
