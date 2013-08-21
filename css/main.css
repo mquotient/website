@@ -30,7 +30,7 @@
 	margin-right: -4px;
 	border-left: 1px solid rgb(194, 194, 194);
 	border-right: 1px solid rgb(194, 194, 194);
-	box-shadow: 0px 1px 2px rgba(0,0,0,.3);
+	border-bottom: 1px solid rgb(194, 194, 194);	
 }
 
 #footer .navcontainer li:first-child {
@@ -126,7 +126,6 @@
     background-image: none;
 	outline: 0;
 	-webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
-	-moz-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
 	box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
 }
 
@@ -162,6 +161,9 @@
 	color: #CC0021;
 	background-color: #fff;
 	-webkit-box-shadow: inset 0 0 3px 0px rgba(0,0,0,1);
+	-moz-box-shadow: inset 0 0 3px 0px rgba(0,0,0,1);
+	-webkit-box-shadow: inset 0 0 3px 0px rgba(0,0,0,1);
+	-webkit-box-shadow: inset 0 0 3px 0px rgba(0,0,0,1);
 	box-shadow: inset 0 0 3px 0px rgba(0,0,0,1);
 }
 
@@ -194,6 +196,8 @@
 
 .page-txt p {
 	padding-bottom: 1em;
+	max-width: 700px;
+	margin: 0 auto;
 }
 
 #about .span6 {
@@ -473,7 +477,7 @@ input:-moz-placeholder { font-family: 'Open Sans', sans-serif; font-size: small 
 
 .saperator {
 	content: '';
-	background: url("/img/separator.png") center center no-repeat;
+	background: url("../img/separator.png") center center no-repeat;
 	display: block;
 	margin: 0 auto;
 	height: 30px;
