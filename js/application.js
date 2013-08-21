@@ -76,16 +76,9 @@ $(document).ready(function() {
 		$navItem.each(function () {
 			$(this).removeClass('shown');
 		});
-		$("#floating-menu").css({
-			width:'100px'
-		});
 	}
 
 	function showMenu() {
-		$("#floating-menu").css({
-			width:'100%'
-		});
-
 		$navItem.each(function () {
 			$(this).addClass('shown');
 		});
@@ -114,15 +107,17 @@ $(document).ready(function() {
 		var wHeight = Math.max(640,$(window).height());
 		// Shift navigation element to top
 		if(top >= (sectionHeight / 2 + $('.navcontainer').height())) {
-			$('#footer').css({
-				opacity: 1,
-				top: 0
-			});
+			
 
 			if($(window).width() <= 768) {
 				$("#floating-menu").fadeIn();
 			}
-
+			else {
+				$('#footer').css({
+					opacity: 1,
+					top: 0
+				});
+			}
 		}
 		else {
 			if($(window).width() <= 768) {
@@ -153,6 +148,10 @@ $(document).ready(function() {
 			$('#footer a:last').addClass('active').parent().addClass('active');	
 		}
     }, 100));
+
+	if($(window).width() <= 768) {
+		$("#floating-menu").hide();
+	}
 });
 
 // Load Google Maps

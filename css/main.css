@@ -50,7 +50,7 @@
 	position: fixed;
 	top: 10px;
 	right: 10px;
-	width: 100px;
+	width: 100%;
 }
 
 #floating-menu > div {
@@ -324,14 +324,15 @@
 }
 
 .card {
-	background-color: #f3f3f3;
+	position: relative;
 	-webkit-box-shadow: 0px 0px 3px 0 rgba(0, 0,0,0.4);
 	box-shadow: 0px 0px 3px 0 rgba(0, 0,0,0.4);
 	margin-bottom: 15px;
 	max-width: 200px;
 }
 
-custom-profile-image-div,.custom-profile-image {
+custom-profile-image-div,
+.custom-profile-image {
 	width: 100%;
 }
 
