@@ -51,7 +51,7 @@
 	top: 10px;
 	right: 10px;
 	width: 100%;
-	height: 38px;
+	height: 0px;
 }
 
 #floating-menu > div {
@@ -76,46 +76,45 @@
 #floating-menu .btn.nav-item {
 	line-height: 32px;
 	position: relative;
+	-webkit-transition: .6s all cubic-bezier(.74,-0.43,.45,1.29);
+	-moz-transition: .6s all cubic-bezier(.74,-0.43,.45,1.29);
+	-ms-transition: .6s all cubic-bezier(.74,-0.43,.45,1.29);
+	-o-transition: .6s all cubic-bezier(.74,-0.43,.45,1.29);
+	transition: .6s all cubic-bezier(.74,-0.43,.45,1.29);
 
-	-webkit-transition: .5s all;
-	-moz-transition: .5s all;
-	-o-transition: .5s all;
-	-ms-transition: .5s all;
-	transition: .5s all;
-
-	-webkit-transform-origin: 100% 0%;
-	-moz-transform-origin: 100% 0%;
-	-o-transform-origin: 100% 0%;
-	-ms-transform-origin: 100% 0%;
-	transform-origin: 100% 0%;
-
-	-webkit-transition-timing-function: cubic-bezier(.31,-1.01,.44,1.65);
-	-moz-transition-timing-function: cubic-bezier(.31,-1.01,.44,1.65);
-	-o-transition-timing-function: cubic-bezier(.31,-1.01,.44,1.65);
-	-ms-transition-timing-function: cubic-bezier(.31,-1.01,.44,1.65);
-	transition-timing-function: cubic-bezier(.31,-1.01,.44,1.65);
-
-	-webkit-transform: translateX(calc(100% + 10px));
-	-moz-transform: translateX(calc(100% + 10px));
-	-o-transform: translateX(calc(100% + 10px));
-	-ms-transform: translateX(calc(100% + 10px));
-	transform: translateX(calc(100% + 10px));
+	-webkit-transform:  translateX(calc(100% + 15px));
+	-moz-transform:  translateX(calc(100% + 15px));
+	-o-transform:  translateX(calc(100% + 15px));
+	-ms-transform:  translateX(calc(100% + 15px));
+	transform:  translateX(calc(100% + 15px));
 }
 
 #floating-menu .btn.nav-item.shown {
-	-webkit-transform: translateX(0px);
-	-moz-transform: translateX(0px);
-	-o-transform: translateX(0px);
-	-ms-transform: translateX(0px);
-	transform: translateX(0px);
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-o-transform: translateX(0);
+	-ms-transform: translateX(0);
+	transform: translateX(0);
 }
 
 #floating-menu .menu-btn {
 	height: 32px;
 	width: 32px;
-	padding: 3px;
+	padding: 5px;
 	cursor: pointer;
 	display: block;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#floating-menu .menu-btn.shown {
+	background: #ddd;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.7);
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.7);
 }
 
 #floating-menu .menu-image {
@@ -511,4 +510,13 @@ input:-moz-placeholder { font-family: 'Open Sans', sans-serif; font-size: small 
 	#contactuscontainer .span4 {
 		padding-top: 60px;
 	}
+}
+
+.saperator {
+	content: '';
+	background: url("../img/separator.png") center center no-repeat;
+	display: block;
+	margin: 0 auto;
+	height: 30px;
+	margin-top: 30px;
 }

@@ -138,12 +138,14 @@ $(document).ready(function() {
 		$navItem.each(function () {
 			$(this).removeClass('shown');
 		});
+		$("#floating-menu .menu-btn").removeClass('shown');
 	}
 
 	function showMenu() {
 		$navItem.each(function () {
 			$(this).addClass('shown');
 		});
+		$("#floating-menu .menu-btn").addClass('shown');
 	}
 
 	menuBtn = document.getElementById("menu-btn");
