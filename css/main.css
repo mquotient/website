@@ -492,6 +492,11 @@ input:-moz-placeholder { font-family: 'Open Sans', sans-serif; font-size: small 
 		-moz-box-sizing:border-box;
 		box-sizing:border-box
 	}
+	
+	#logo-span {
+		font-size: 2em;
+		line-height:1.4em;
+	}
 }
 
 @media (max-width: 380px) {
