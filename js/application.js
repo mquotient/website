@@ -252,7 +252,7 @@ function initialize() {
 		'	<span>P:</span>' +
 		'	+ 91 (020) 4120 4763' +
 		'	<br>' +
-		'	<a target="_blank" href="http://maps.google.com/maps?ll=18.535611,73.885682&amp;z=18&amp;t=m&amp;hl=en&amp;mapclient=apiv3" title="Click to see this area on Google Maps"><i class="icon-map-marker" style="vertical-align: sub;margin-left: -3px;"></i> View it on Map </a>' +
+		'	<a target="_blank" href="http://goo.gl/maps/qKhfo" title="Click to see this area on Google Maps"><i class="icon-map-marker" style="vertical-align: sub;margin-left: -3px;"></i> View it on Map </a>' +
 		'</address>' +
 		'</div>';
 
