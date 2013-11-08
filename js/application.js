@@ -209,7 +209,7 @@ $(document).ready(function() {
 
 		if((pageYOffset + 200) > $('section:last')[0].offsetTop) {
 			$('#footer .active').removeClass('active').parent().removeClass('active');	
-			$('#footer a:last').addClass('active').parent().addClass('active');	
+			$('#footer a[data-id="contactus"]').addClass('active').parent().addClass('active');	
 		}
     }, 100));
 
