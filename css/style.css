@@ -124,8 +124,11 @@ img::-moz-selection {
 body {
   margin: 0 auto;
   background-color: #fffcf5;
-  font-family: 'Open Sans', sans-serif;
   -webkit-tap-highlight-color: rgba(232, 76, 56, 0.38);
+}
+
+body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Open Sans', sans-serif;
 }
 
 .group:before,.group:after {

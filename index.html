@@ -59,9 +59,9 @@
             <section id="about">
                 <div class="wrapper">
                     <div id="aboutcontainer">
-                        <div class="container-fluid">
-                            <div class="row-fluid">
-                                <div class="span12">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12">
                                     <h1>About <span style="font-weight:600">Us</span></h1>
                                     <div class="saperator"></div>
                                     <div class="page-txt">
@@ -81,7 +81,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="container-fluid">
+                        <div class="container">
                             <!-- <h1>Team</h1>
                             <div class="saperator"></div> -->
                             <br>
@@ -96,7 +96,7 @@
             <section id="products">
                 <div class="wrapper">
                     <div id="productscontainer">
-                        <div class="container-fluid">
+                        <div class="container">
                             <h1>Products</h1>
                             <div class="saperator"></div>
                             <div id="this-carousel-id" class="carousel slide">
@@ -134,7 +134,7 @@
             <section id="careers">
                 <div class="wrapper">
                     <div id="careerscontainer">
-                        <div class="container-fluid">
+                        <div class="container">
                             <h1>Want to join Us?</h1>
                             <div class="saperator"></div>
                             <div>
@@ -162,9 +162,9 @@
                                 <br>
                                 <p> 
                                     <ul class="unstyled spaced">
-                                        <li><i class="icon-ok"></i> Do you generally punch above your weight?</li>
-                                        <li><i class="icon-ok"></i> Are you willing to give all that it takes to support your team?</li>
-                                        <li><i class="icon-ok"></i> Do you get frustrated by getting scrutinized through multiple layers of bureaucracy? </li>
+                                        <li><i class="glyphicon glyphicon-ok"></i> Do you generally punch above your weight?</li>
+                                        <li><i class="glyphicon glyphicon-ok"></i> Are you willing to give all that it takes to support your team?</li>
+                                        <li><i class="glyphicon glyphicon-ok"></i> Do you get frustrated by getting scrutinized through multiple layers of bureaucracy? </li>
                                     </ul>
                                 </p>
                                 <br>
@@ -233,9 +233,9 @@
             <section id="contactus">
                 <div class="wrapper">
                     <div id="contactuscontainer">
-                        <div class="container-fluid">
-                            <div class="row-fluid">
-                                <div class="span4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-4">
                                     <p>
                                         407/ Building 2, Gera Gardens Condominium, 
                                         <br>
@@ -244,26 +244,26 @@
                                         Pune - 411001, India
                                     </p>
                                 </div>
-                                <div class="span4" style="margin-top: 0;">
+                                <div class="col-sm-4" style="margin-top: 0;">
                                     <p>
                                         <h4 id="logo-span">
                                             mquotient                                           
                                         </h4>
                                         <br>
                                         <a href="http://www.linkedin.com/company/1948874?trk=tyah" target="_blank">
-                                            <img class="social-icon" width="32" height="32" src="img/social/linkedin-white.png" alt="linkedin Account">
+                                            <img class="social-icon" src="img/social/linkedin.svg" alt="linkedin Account">
                                         </a>
                                                 
                                         <a href="https://twitter.com/MQuotient" target="_blank">
-                                            <img class="social-icon" width="32" height="32" src="img/social/twitter-white.png" alt="twitter Account">
+                                            <img class="social-icon" src="img/social/twitter.svg" alt="twitter Account">
                                         </a>
 
                                         <a href="https://www.facebook.com/mquotient" target="_blank">
-                                            <img class="social-icon" width="32" height="32" src="img/social/facebook-white.png" alt="facebook Account">
+                                            <img class="social-icon" src="img/social/facebook.svg" alt="facebook Account">
                                         </a>
                                     </p>
                                 </div>
-                                <div class="span4">
+                                <div class="col-sm-4">
                                     Email: info@mquotient.net
                                 </div>
                                 <div class="clear"></div>
@@ -278,39 +278,38 @@
             </section>
            
             <script id="employeesTemplate" type="text/template">
-                <div class="row-fluid">
+                <div class="row">
                     <!-- For loop start -->
                     <%_.forEach(employees, function (employee) {%>
-                    <div class="span3 center profile-template">
+                    <div class="col-md-3 center profile-template">
                         <center>
                             <div class="flip"> 
                                 <div class="card"> 
                                     <div class="face front"> 
                                         <div class="custom-profile-image-div">
-                                            <div class="profile-info"><img title="<%=employee.name%>'s Info" id="avatar2" src="img/info.png"></div>
                                             <img class="custom-profile-image" alt="<%=employee.name%>'s Avatar" id="avatar2" src="<%=employee.imgSource%>">
                                         </div>
                                     </div> 
                                     <div class="face back"> 
                                         <div class="custom-profile-info">
-                                            <p><b><%=employee.name%> <%=employee.sirname%></b></p>
-                                            <p>
-                                                <%=employee.position%>
+                                            <p><b><%= employee.name %> <%= employee.sirname %></b></p>
+                                            <p class="designation">
+                                                <%= employee.position %>
                                             </p>
                                             <p class="social-info">
-                                            <a href="<%=employee.linkedin%>" target="_blank">
-                                                <img width="32" height="32" src="img/social/linkedin.png" alt="linkedin Account">
-                                            </a>
-                                                    
-                                            <a href="<%=employee.twitter%>" target="_blank">
-                                                <img width="32" height="32" src="img/social/twitter.png" alt="twitter Account">
-                                            </a>
-
-                                            <%if (employee.github) {%>
-                                                <a href="<%=employee.github%>" target="_blank">
-                                                    <img width="32" height="32" src="img/social/github.png" alt="github Account">
+                                                <a href="<%= employee.linkedin %>" target="_blank">
+                                                    <img width="32" height="32" src="img/social/linkedin-rect.svg" alt="linkedin Account">
                                                 </a>
-                                            <%}%>
+                                                        
+                                                <a href="<%= employee.twitter %>" target="_blank">
+                                                    <img width="32" height="32" src="img/social/twitter-rect.svg" alt="twitter Account">
+                                                </a>
+
+                                                <%if (employee.github) {%>
+                                                    <a href="<%= employee.github %>" target="_blank">
+                                                        <img width="32" height="32" src="img/social/github-rect.svg" alt="github Account">
+                                                    </a>
+                                                <%}%>
                                             </p>
                                         </div>
                                     </div> 
@@ -359,7 +358,7 @@
         <div id="floating-menu">
             <div>
                 <a id="menu-btn" class="pull-right menu-btn">
-                    <em class="menu-image"></em>
+                    <img src="img/menu.svg" class="menu-image"></img>
                 </a>
             </div>
             <div>

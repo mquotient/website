@@ -28,76 +28,11 @@ function resizePages() {
 }
 
 $(window).load(function() {
-	// Make content of each section vertically center
-
-	if(navigator.appName.indexOf("Internet Explorer") == -1) {
-		$('.card').height($('.custom-profile-image').height());
-
-		// IE tag Hacks are not working
-		var styleForNonIE = '.flip {' +
-		'      -webkit-perspective: 800;' +
-		'      -moz-perspective: 800;' +
-		'      -ms-perspective: 800;' +
-		'      -o-perspective: 800;' +
-		'      perspective: 800;' +
-		'      position: relative;' +
-		'    }' +
-		'    .flip .card.flipped {' +
-		'      -webkit-transform: rotatey(-180deg);' +
-		'      -moz-transform: rotatey(-180deg);' +
-		'      -ms-transform: rotatey(-180deg);' +
-		'      -o-transform: rotatey(-180deg);' +
-		'      transform: rotatey(-180deg);' +
-		'    }' +
-		'    .flip .card {' +
-		'        width: 100%;' +
-		'        height: 100%;' +
-		'        -webkit-transform-style: preserve-3d;' +
-		'        -moz-transform-style: preserve-3d;' +
-		'        -ms-transform-style: preserve-3d;' +
-		'        -o-transform-style: preserve-3d;' +
-		'        transform-style: preserve-3d;' +
-		'        -webkit-transition: 0.5s;' +
-		'        -moz-transition: 0.5s;' +
-		'        -ms-transition: 0.5s;' +
-		'        -o-transition: 0.5s;' +
-		'        transition: 0.5s;' +
-		'    }' +
-		'    .flip .card .face {' +
-		'      width: 100%;' +
-		'      height: 100%;' +
-		'      position: absolute;' +
-		'      -webkit-backface-visibility: hidden ;' +
-		'      -moz-backface-visibility: hidden ;' +
-		'      -ms-backface-visibility: hidden ;' +
-		'      -o-backface-visibility: hidden ;' +
-		'      backface-visibility: hidden ;' +
-		'      z-index: 2;' +
-		'    }' +
-		'    .flip .card .front {' +
-		'      position: absolute;' +
-		'      z-index: 1;' +
-		'        color: white;' +
-		'        cursor: pointer;' +
-		'    }' +
-		'    .flip .card .back {' +
-		'      -webkit-transform: rotatey(-180deg);' +
-		'      -moz-transform: rotatey(-180deg);' +
-		'      -ms-transform: rotatey(-180deg);' +
-		'      -o-transform: rotatey(-180deg);' +
-		'      transform: rotatey(-180deg);' +
-		'      color: black;' +
-		'      cursor: pointer;' +
-		'    }';
-
-    	$('.fixCss').append(styleForNonIE);
-	}
-
 	$('section:not(:first,:last, #team, #about)').each(function(){
 		var remainingSpace = $('#' + this.id + ' .wrapper').height() - $('#' + this.id + 'container').height(),
 			marginTop = remainingSpace / 2;
 
-			$('#' + this.id + 'container').css('margin-top', marginTop + 'px');
+		$('#' + this.id + 'container').css('margin-top', marginTop + 'px');
 	});
 
 });
