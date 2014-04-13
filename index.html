@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-        <meta name="viewport" content="width=device-width, initial-scale=0.8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content="">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css"/>
@@ -11,6 +12,8 @@
         <script src="js/bootstrap.js"></script>
         <script src="js/underscore.js"></script>
         <script src="js/application.js"></script>
+        <script src="js/snap.svg-min.js"></script>
+        <script src="js/employees.js"></script>
         <title>MQuotient</title>
     </head>
 
@@ -39,7 +42,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <h1>About <span style="font-weight:600">Us</span></h1>
+                                    <h1 class="section-heading">About <span style="font-weight:600">Us</span></h1>
                                     <div class="saperator"></div>
                                     <div class="page-txt">
                                         <p>
@@ -52,27 +55,26 @@
                                             Our products are highly scalable and can be deployed locally inside your network or hosted on some of the most secure cloud networks. Open APIs allow seamless connection to your existing systems for pushing and pulling data.
                                         </p>
                                         <p>
-                                            We have offices in Pune and New Delhi, reach us on info(at)mquotient.net for more information.
+                                            We have offices in Pune and New Delhi, reach us on <a href="mailto:info@mquotient.net">info@mquotient.net</a> for more information.
                                         </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                            <br>
+                        <br>
+                        <h4 class="our-team">Our Team</h4>
                         <div class="container">
-                            <div class="employees-group">
-                            </div>
+                            <div class="employees-group grid" id="grid"></div>
                         </div>
                     </div>
                 </div>
                 <div class="down"><a href="#products"><img width="32" height="32" src="img/arrow.png" title="Products"/></a></div>
             </section>
-
-            <section id="products">
+            <section id="products" class="colored-background">
                 <div class="wrapper">
                     <div id="productscontainer">
                         <div class="container">
-                            <h1>Products</h1>
+                            <h1 class="section-heading">Products</h1>
                             <div class="saperator"></div>
                             <div id="this-carousel-id" class="carousel slide">
                                 <div class="carousel-inner">
@@ -110,7 +112,7 @@
                 <div class="wrapper">
                     <div id="careerscontainer">
                         <div class="container">
-                            <h1>Want to join Us?</h1>
+                            <h1 class="section-heading">Want to join Us?</h1>
                             <div class="saperator"></div>
                             <div>
                                 <h4>What do we do?</h4>
@@ -133,7 +135,7 @@
                             <div>
                                 <h4>Do you fit in?</h4>
                                 <br>
-                                <p>We are looking for Go to people who solve issues around them.</p>
+                                <p>We are looking for people who solve issues around them.</p>
                                 <br>
                                 <p> 
                                     <ul class="unstyled spaced">
@@ -143,7 +145,7 @@
                                     </ul>
                                 </p>
                                 <br>
-                                <p> If so, we’d like to hear from you. We’re building outstanding customer experience products and need you to help us build it the right way, drop in a note to Vijisha @ <a href="mailto:vijisha@mquotient.net">vijisha(at)mquotient.net</a>, with samples of some recent work you are proud of. </p>
+                                <p> If so, we’d like to hear from you. We’re building outstanding customer experience products and need you to help us build it the right way, drop in a note to Vijisha @ <a href="mailto:vijisha@mquotient.net">vijisha@mquotient.net</a>, with samples of some recent work you are proud of. </p>
                             </div>
 
                             <br><br>
@@ -194,9 +196,9 @@
                                     </ol>
                                     <hr>
                                     <div class="apply-button">
-                                        <button class="btn pull-right">Apply</button>
+                                        <button class="btn btn-default pull-right">Apply</button>
                                     </div>
-
+                                    <div class="clear"></div>
                                 </div>
                             </div>
                         </div>
@@ -205,7 +207,7 @@
                 <div class="down"><a href="#contactus"><img width="32" height="32" src="img/arrow.png" title="Contact Us" /></a></div>
             </section>
 
-            <section id="contactus">
+            <section id="contactus" class="colored-background">
                 <div class="wrapper">
                     <div id="contactuscontainer">
                         <div class="container">
@@ -222,7 +224,7 @@
                                 <div class="col-sm-4" style="margin-top: 0;">
                                     <p>
                                         <h4 id="logo-span">
-                                            mquotient                                           
+                                            mquotient
                                         </h4>
                                         <br>
                                         <a href="http://www.linkedin.com/company/1948874?trk=tyah" target="_blank">
@@ -253,67 +255,61 @@
             </section>
            
             <script id="employeesTemplate" type="text/template">
-                <div class="row">
-                    <!-- For loop start -->
-                    <%_.forEach(employees, function (employee) {%>
-                    <div class="col-md-3 center profile-template">
-                        <center>
-                            <div class="flip"> 
-                                <div class="card"> 
-                                    <div class="face front"> 
-                                        <div class="custom-profile-image-div">
-                                            <img class="custom-profile-image" alt="<%=employee.name%>'s Avatar" id="avatar2" src="<%=employee.imgSource%>">
-                                        </div>
-                                    </div> 
-                                    <div class="face back"> 
-                                        <div class="custom-profile-info">
-                                            <p><b><%= employee.name %> <%= employee.sirname %></b></p>
-                                            <p class="designation">
-                                                <%= employee.position %>
-                                            </p>
-                                            <p class="social-info">
-                                                <a href="<%= employee.linkedin %>" target="_blank">
-                                                    <img width="32" height="32" src="img/social/linkedin-rect.svg" alt="linkedin Account">
-                                                </a>
-                                                        
-                                                <a href="<%= employee.twitter %>" target="_blank">
-                                                    <img width="32" height="32" src="img/social/twitter-rect.svg" alt="twitter Account">
-                                                </a>
+                <%_.forEach(employees, function (employee, index) {%>
+                <a href="#" data-path-hover="M 180,160 0,218 0,0 180,0 z">
+                    <figure>
+                        <img alt="<%=employee.name%>'s Avatar" src="img/dummy profiles/<%=index % 8 + 1%>.png" />
+                        <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 180,34.57627 -180,0 L 0,0 180,0 z"/></svg>
+                        <figcaption>
+                            <h2><%=employee.name%></h2>
+                            <p><%= employee.position %></p>
+                            <p class="social-info">
+                                <img width="32" height="32" src="img/social/linkedin-rect.svg" alt="linkedin Account"/>
+                                <img width="32" height="32" src="img/social/twitter-rect.svg" alt="twitter Account"/>
 
-                                                <%if (employee.github) {%>
-                                                    <a href="<%= employee.github %>" target="_blank">
-                                                        <img width="32" height="32" src="img/social/github-rect.svg" alt="github Account">
-                                                    </a>
-                                                <%}%>
-                                            </p>
-                                        </div>
-                                    </div> 
-                                </div> 
-                            </div>
-                        </center>
-                    </div><!--/span-->
-                    <%});%>
-                </div>
+                                <% if (employee.github) { %>
+                                    <img width="32" height="32" src="img/social/github-rect.svg" alt="github Account" />
+                                <% } %>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </a>
+                <%});%>
             </script>
-            <script src="js/employees.js"></script>
-            
             <script>
-                $.each(employees, function(){
-                    $('.employees-group').append(_.template($('#employeesTemplate').html(), {employees: this}));
-                });
-            </script>
+                // Append the template
+                $('.employees-group').append(_.template($('#employeesTemplate').html(), {employees: employees}));
 
+                // Apply hover effect on employe card
+                (function () {
+                    function init() {
+                        var speed = 250,
+                            easing = mina.easeinout;
 
-            <!--[if !IE]-->
-            <script type="text/javascript">
-                $('.flip').click(function(){
-                    $(this).find('.card').toggleClass('flipped');
-                });
+                        [].slice.call(document.querySelectorAll('#grid > a')).forEach(function (el) {
+                            var s = Snap(el.querySelector('svg')), path = s.select('path'),
+                                pathConfig = {
+                                    from : path.attr('d'),
+                                    to : el.getAttribute('data-path-hover')
+                                };
+
+                            el.addEventListener('mouseenter', function () {
+                                path.animate({ 'path' : pathConfig.to }, speed, easing);
+                            });
+
+                            el.addEventListener('mouseleave', function () {
+                                path.animate({ 'path' : pathConfig.from }, speed, easing);
+                            });
+                        });
+                    }
+
+                    init();
+
+                })();
             </script>
-            <!--[endif]-->
         </div>
 
-        <div id="footer">
+        <div id="menu">
             <div class="navcontainer">
                 <ul>
                     <li><a class="goTo" href="#cover" data-id="cover">Home</a></li>
@@ -332,31 +328,11 @@
                     <img src="img/menu.svg" class="menu-image"></img>
                 </a>
             </div>
-            <div>
-                <a href="#cover" class="btn btn-block pull-right nav-item goTo">
-                    Home
-                </a>
-            </div>
-            <div>
-                <a href="#about" class="btn btn-block pull-right nav-item goTo">
-                    About Us
-                </a>
-            </div>
-            <div>
-                <a href="#products" class="btn btn-block pull-right nav-item goTo">
-                    Products
-                </a>
-            </div>
-            <div>
-                <a href="#careers" class="btn btn-block pull-right nav-item goTo">
-                    Careers
-                </a>
-            </div>
-            <div>
-                <a href="#contactus" class="btn btn-block pull-right nav-item goTo">
-                    Contact Us
-                </a>
-            </div>
+            <div><a href="#cover" class="btn btn-block pull-right nav-item goTo">Home</a></div>
+            <div><a href="#about" class="btn btn-block pull-right nav-item goTo">About Us</a></div>
+            <div><a href="#products" class="btn btn-block pull-right nav-item goTo">Products</a></div>
+            <div><a href="#careers" class="btn btn-block pull-right nav-item goTo">Careers</a></div>
+            <div><a href="#contactus" class="btn btn-block pull-right nav-item goTo">Contact Us</a></div>
         </div>
     </body>
 </html>
