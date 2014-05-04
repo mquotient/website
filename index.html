@@ -258,8 +258,8 @@
                 <%_.forEach(employees, function (employee, index) {%>
                 <a href="#" data-path-hover="M 180,160 0,218 0,0 180,0 z">
                     <figure>
-                        <img alt="<%=employee.name%>'s Avatar" src="img/dummy profiles/<%=index % 8 + 1%>.png" />
-                        <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 180,34.57627 -180,0 L 0,0 180,0 z"/></svg>
+                        <img alt="<%= employee.name %>'s Avatar" src="img/profiles/<%= employee.shortname %>.jpg" />
+                        <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 180,50 -180,0 L 0,0 180,0 z"/></svg>
                         <figcaption>
                             <h2><%=employee.name%></h2>
                             <p><%= employee.position %></p>
