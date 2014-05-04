@@ -724,6 +724,10 @@ input:-moz-placeholder {
     padding-left: 3px;
     padding-right: 2px;
   }
+
+  #cover h1 {
+    font-size: 7em;
+  }
 }
 @media (min-width: 691px) {
   .col-md-3 {

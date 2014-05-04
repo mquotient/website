@@ -725,6 +725,10 @@ input:-moz-placeholder { font-family: 'Open Sans', sans-serif; font-size: small 
         padding-left: 3px;
         padding-right: 2px;
     }
+
+    #cover h1 {
+        font-size: 7em;
+    }
 }
 
 @media (min-width: 691px) {
@@ -740,12 +744,12 @@ input:-moz-placeholder { font-family: 'Open Sans', sans-serif; font-size: small 
 @media (min-width: 526px) and (max-width: 767px) {
     body {
         font-size: 12px;
-    }
+    }   
 }
 
 @media (max-width: 525px) and (min-width: 480px) {
     body {
-        font-size: 11px;        
+        font-size: 11px;
     }
 }
 
