@@ -35,6 +35,14 @@ section {
   clear: both;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.container {
+  max-width: 1000px;
+}
+
 .wrapper {
   padding: 40px 20px;
   -webkit-box-sizing: border-box;
@@ -75,7 +83,11 @@ section {
 }
 
 .colored-background {
-  background-color: #3e99db;
+  background-color: #336699;
+  color: #d5d5d5;
+}
+.colored-background .para-description {
+  font-weight: 300;
 }
 
 .white-background {
@@ -234,18 +246,18 @@ section {
 }
 
 #cover .navcontainer ul li a:hover {
-  color: #3e99db;
+  color: #336699;
   background-color: #fff;
 }
 
 /* Menu End */
 /* Main Cover Start */
 .m {
-  color: #3e99db;
+  color: #CC0021;
 }
 
 .q {
-  color: #4B4B4B;
+  color: #748B96;
 }
 
 #cover h1 {
@@ -266,17 +278,32 @@ section {
 
 #cover {
   background-color: #fff;
-  background: -webkit-linear-gradient(top, white 50%, #3e99db 50%);
-  background: -moz-linear-gradient(top, white 50%, #3e99db 50%);
-  background: -o-linear-gradient(top, white 50%, #3e99db 50%);
-  background: -ms-linear-gradient(top, white 50%, #3e99db 50%);
-  background: linear-gradient(top, white 50%, #3e99db 50%);
+  background: -webkit-linear-gradient(top, white 50%, #336699 50%);
+  background: -moz-linear-gradient(top, white 50%, #336699 50%);
+  background: -o-linear-gradient(top, white 50%, #336699 50%);
+  background: -ms-linear-gradient(top, white 50%, #336699 50%);
+  background: linear-gradient(top, white 50%, #336699 50%);
 }
 
 /* Main Cover End */
-.section-heading {
+.section-heading,
+.ul-heading,
+.para-heading {
   font-weight: 300;
+}
+
+.section-heading {
   text-align: center;
+}
+
+ol,
+.para-description {
+  line-height: 2em;
+  font-size: 1.2em;
+}
+
+.ul-heading {
+  padding-bottom: 5px;
 }
 
 .saperator {
@@ -313,16 +340,9 @@ section {
   margin-top: 5px;
 }
 
-#productscontainer h1,
-#careerscontainer h1,
-#contactuscontainer h1 {
+h1.section-heading {
   font-size: 3.8em;
   line-height: 1em;
-}
-
-#productscontainer .carousel {
-  max-width: 1000px;
-  margin: 0 auto;
 }
 
 .social-icon {
@@ -376,10 +396,6 @@ section {
 
 .custom-span {
   margin-bottom: 20px;
-}
-
-#productscontainer h1 {
-  color: white;
 }
 
 #careerscontainer h1 {
@@ -619,47 +635,6 @@ custom-profile-image-div,
   }
 }
 /* Profile Card End  */
-/* Carousel Controls Start */
-.carousel-anchor, .carousel-anchor img {
-  width: 100%;
-}
-
-.control-group {
-  margin-bottom: 10px;
-}
-
-.carousel-caption {
-  background: rgba(0, 0, 0, 0.5);
-  position: static;
-  padding: 20px 30px;
-}
-
-.carousel-control {
-  font-size: 48px;
-  border-radius: 0;
-}
-
-.carousel-control.left {
-  width: 10%;
-  padding-left: 10px;
-  text-align: left;
-  background-image: -webkit-linear-gradient(left, color-stop(rgba(0, 0, 0, 0.5) 0%), color-stop(rgba(0, 0, 0, 0.0001) 50%));
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 50%);
-}
-
-.carousel-control.right {
-  width: 10%;
-  padding-right: 10px;
-  text-align: right;
-  background-image: -webkit-linear-gradient(left, color-stop(rgba(0, 0, 0, 0.0001) 50%), color-stop(rgba(0, 0, 0, 0.5) 100%));
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 50%, rgba(0, 0, 0, 0.5) 100%);
-}
-
-.custom-label {
-  padding: 1px 4px 1px 3px;
-}
-
-/* Carousel Controls Start */
 .img-polaroid.custom-image-polaroid {
   padding: 20px;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
@@ -671,6 +646,9 @@ custom-profile-image-div,
 
 ul.unstyled {
   list-style: none;
+}
+ul.unstyled li {
+  line-height: 2em;
 }
 
 #careerscontainer .unstyled li {
