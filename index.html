@@ -62,7 +62,6 @@
                         </div>
                         <br>
                         <div class="container">
-                            <h4 class="our-team">Our Team</h4>
                             <div class="employees-group grid" id="grid"></div>
                         </div>
                     </div>
@@ -75,7 +74,7 @@
                         <div class="container">
                             <h1 class="section-heading">Products</h1>
                             <div class="saperator"></div>
-                            <h2 class="para-heading">Glyfix</h2>
+                            <h2 class="para-heading">GlyphX</h2>
                             <br>
                             <p class="para-description">
                                 GlyphX based on ICR (Intelligent Character Recognition) and Artificial Intelligence technology to convert physical handwritten text into digital format through machine reading. Using a scanner, the hand-written data is read by a software, hence eliminating the need of Manual Data Entry. The focus of the product is a high level of accuracy, with an emphasis on minimizing the cost.
@@ -261,12 +260,11 @@
                                         Pune - 411001, India
                                     </p>
                                 </div>
-                                <div class="col-sm-4" style="margin-top: 0;">
-                                    <p class="para-description">
-                                        <h4 id="logo-span">
-                                            mquotient
-                                        </h4>
-                                        <br>
+                                <div class="col-sm-4">
+                                    <h4 id="logo-span">
+                                        mquotient
+                                    </h4>
+                                    <div>
                                         <a href="http://www.linkedin.com/company/1948874?trk=tyah" target="_blank">
                                             <img class="social-icon" src="img/social/linkedin.svg" alt="linkedin Account">
                                         </a>
@@ -278,10 +276,16 @@
                                         <a href="https://www.facebook.com/mquotient" target="_blank">
                                             <img class="social-icon" src="img/social/facebook.svg" alt="facebook Account">
                                         </a>
-                                    </p>
+                                    </div>
                                 </div>
                                 <div class="col-sm-4">
-                                    Email: info@mquotient.net
+                                    <div>
+                                        Email: <a href="mailto:info@mquotient.net">info@mquotient.net</a>
+                                    </div>
+                                    <div>
+                                        Tel: <a href="tel:02041204763">(020) 41204763</a>
+                                    </div>
+
                                 </div>
                                 <div class="clear"></div>
                             </div>
@@ -302,7 +306,7 @@
                         <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 180,50 -180,0 L 0,0 180,0 z"/></svg>
                         <figcaption>
                             <h2><%=employee.name%></h2>
-                            <p class="para-description"><%= employee.position %></p>
+                            <p class="para-position"><%= employee.position %></p>
                             <p class="social-info">
                                 <img width="32" height="32" src="img/social/linkedin-rect.svg" alt="linkedin Account"/>
                                 <img width="32" height="32" src="img/social/twitter-rect.svg" alt="twitter Account"/>
