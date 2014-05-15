@@ -496,6 +496,11 @@ input:-moz-placeholder {
   #floating-menu {
     display: block;
   }
+
+  #covercontainer a {
+    padding: 5px;
+    font-size: 1em;
+  }
 }
 @media (max-width: 768px) {
   #menu ul li a {

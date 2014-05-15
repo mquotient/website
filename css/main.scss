@@ -544,6 +544,11 @@ input:-moz-placeholder { font-family: 'Open Sans', sans-serif; font-size: small 
     #floating-menu {
         display: block;
     }
+
+    #covercontainer a {
+        padding: 5px;
+        font-size: 1em;
+    }
 }
 
 @media (max-width: 768px) {
