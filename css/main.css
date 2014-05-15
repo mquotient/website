@@ -13,7 +13,11 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, blockquote,
 
 body {
   margin: 0 auto;
-  -webkit-tap-highlight-color: rgba(232, 76, 56, 0.38);
+  background: url(../img/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 body, h1, h2, h3, h4, h5, h6 {
@@ -79,7 +83,7 @@ section {
 }
 
 .colored-background {
-  background-color: #336699;
+  background-color: rgba(51, 102, 153, 0.7);
   color: white;
 }
 .colored-background .para-description {
@@ -88,9 +92,16 @@ section {
 .colored-background .down a {
   background-image: url(../img/down-white.svg);
 }
+.colored-background a {
+  color: white;
+}
 
 .white-background {
   background-color: #fff;
+  color: #000;
+}
+.white-background a {
+  color: #000;
 }
 
 /* Menu start */
@@ -213,7 +224,6 @@ section {
   text-decoration: none;
   padding: 5px 10px;
   color: #fff;
-  border-radius: 5px;
   position: relative;
   top: 0;
   -webkit-transition: .2s all linear;
@@ -236,11 +246,11 @@ section {
 
 #cover {
   background-color: #F8F8F8;
-  background: -webkit-linear-gradient(top, white 50%, #cd0f45 50%);
-  background: -moz-linear-gradient(top, white 50%, #cd0f45 50%);
-  background: -o-linear-gradient(top, white 50%, #cd0f45 50%);
-  background: -ms-linear-gradient(top, white 50%, #cd0f45 50%);
-  background: linear-gradient(top, white 50%, #cd0f45 50%);
+  background: -webkit-linear-gradient(top, white 50%, rgba(51, 102, 153, 0.7) 50%);
+  background: -moz-linear-gradient(top, white 50%, rgba(51, 102, 153, 0.7) 50%);
+  background: -o-linear-gradient(top, white 50%, rgba(51, 102, 153, 0.7) 50%);
+  background: -ms-linear-gradient(top, white 50%, rgba(51, 102, 153, 0.7) 50%);
+  background: linear-gradient(top, white 50%, rgba(51, 102, 153, 0.7) 50%);
 }
 #cover h1 {
   float: left;
@@ -322,7 +332,13 @@ h1.section-heading {
   line-height: 1em;
 }
 
-.social-icon {
+#contactus {
+  background-color: rgba(94, 116, 139, 0.61);
+}
+#contactus .wrapper {
+  padding: 40px 0 0;
+}
+#contactus .social-icon {
   width: 3em;
   height: 3em;
   -webkit-transition: .1s all;
@@ -331,29 +347,31 @@ h1.section-heading {
   -o-transition: .1s all;
   transition: .1s all;
 }
-.social-icon :hover {
+#contactus .social-icon :hover {
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
-
-#contactus .wrapper {
-  padding: 40px 0 0;
+#contactus .social-links a:hover {
+  text-decoration: none;
 }
 
+#contactuscontainer address {
+  color: #000;
+}
 #contactuscontainer address a {
+  color: #000;
   text-decoration: underline;
   padding-left: 5px;
 }
+#contactuscontainer address .m, #contactuscontainer address .q {
+  font-size: 1.3em;
+}
 #contactuscontainer .col-sm-4 {
   text-align: center;
-  color: #FFF;
   margin-top: 30px;
   margin-bottom: 30px;
-}
-#contactuscontainer .col-sm-4 a {
-  color: #FFF;
 }
 
 #logo-span {
@@ -361,7 +379,6 @@ h1.section-heading {
   font-weight: 400;
   line-height: 1em;
   font-family: 'trebuc', sans-serif;
-  color: #fff;
 }
 
 #map img {
@@ -369,8 +386,9 @@ h1.section-heading {
 }
 
 .map-container {
-  border-top: 1px solid rgba(0, 0, 0, 0.14);
   box-shadow: 0 0 3px rgba(37, 37, 37, 0.25);
+  margin-left: 3%;
+  width: 94%;
 }
 
 .custom-span {
@@ -408,6 +426,7 @@ custom-profile-image-div,
 
 .employees-group {
   margin: 0 auto;
+  display: none;
 }
 
 .profile-template {
