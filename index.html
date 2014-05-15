@@ -28,7 +28,6 @@
                                 <li><a class="goTo" href="#about">About Us</a></li>
                                 <li><a class="goTo" href="#products">Products</a></li>
                                 <li><a class="goTo" href="#solutions">Solutions</a></li>
-                                <li><a class="goTo" href="#service">Services</a></li>
                                 <li><a class="goTo" href="#careers">Careers</a></li>
                                 <li><a class="goTo" href="#contactus">Contact Us</a></li>
                                 <li><a target="_blank" href="http://blog.mquotient.net">Blogs</a></li>
@@ -91,43 +90,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="down"><a href="#services"></a></div>
-            </section>
-
-            <section id="services" class="white-background">
-                <div class="wrapper">
-                    <div id="servicescontainer">
-                        <div class="container">
-                            <h1 class="section-heading">Services</h1>
-                            <div class="saperator"></div>
-                            <h2 class="para-heading">Application Development</h2>
-                            <br>
-                            <p class="para-description">
-                                Our solutions are designed around the concept of user configurability that ranges from workflows, work lists and data fields to security, data dictionary and reporting.
-                            </p>
-                            <br>
-                            <p class="para-description">
-                                We build powerful applications for the enterprise with a strong focus on ease of use. Our software marries cutting edge Computer Science research with great usability and brings it to the real world. We have built applications in domains ranging from telecommunications to state-of-the-art Document Analysis and Computer Vision.
-                            </p>
-                            <br>
-                            <h2 class="para-heading">Support & Maintenance Services</h2>
-                            <br>
-                            <p class="para-description">
-                                Post-sales customer relationships are a priority for us. mquotient provides modifications, enhancements & production support as part of software maintenance services. Our support portfolio includes:
-                            </p>
-                            <br>
-                            <ul class="unstyled spaced square">
-                                <li>Maintenance support of mquotient Applications & Products</li>
-                                <li>Application monitoring and report generation</li>
-                                <li>Software Performance assessment </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
                 <div class="down"><a href="#solutions"></a></div>
             </section>
 
-            <section id="solutions" class="colored-background">
+            <section id="solutions" class="white-background">
                 <div class="wrapper">
                     <div id="solutionscontainer">
                         <div class="container">
@@ -135,31 +101,12 @@
                             <div class="saperator"></div>
                             <h2 class="para-heading text-center">Banking, Financial Services & Insurance</h2>
                             <br>
-
                             <h3 class="ul-heading">Data & Contact Management</h3>
-                            <!-- <ul class="unstyled spaced square">
-                                <li>Data Storage </li>
-                                <li>Retrieval including Remote Retrieval </li>
-                                <li>Access Rights Management </li>
-                                <li>De-duplication</li>
-                            </ul> -->
                             <br>
                             <h3 class="ul-heading">Business Process Management</h3>
-                            <!-- <ul class="unstyled spaced square">
-                                <li>Customizable and flexible workflows</li>
-                                <li>Workflow will move a product through entire life cycle</li>
-                                <li>Support touch points for initiating communication with contacts and other stake </li>
-                            </ul> -->
                             <br>
                             <h3 class="ul-heading">ERP Integration</h3>
-                            <!-- <ul class="unstyled spaced square">
-                                <li>Integrates with external ERP systems</li>
-                                <li>Provides a standard compliant RESTful API for function access</li>
-                                <li>Provides an open connector model which allows plugging in or third party ERP systems</li>
-                            </ul> -->
-
                             <br>
-
                             <h2 class="para-heading text-center">Telecommunications</h2>
                             <br>
                             <h3 class="ul-heading">Charging Gateway</h3>
@@ -172,18 +119,13 @@
                                 Call Records Database provides run time decoding and storage of CDRs.  This comes integrated with highly scalable database to store millions of records and query efficiently on any CDR parameters.  This helps our clients to service customers and resolve service requests quickly
                             </p>
                             <br>
-                            <!-- <h3 class="ul-heading">Reverse DNS Lookup</h3>
-                            <p class="para-description">
-                                A Reverse DNS Lookup tool is used to extract the destination from the IP headers and do a reverse lookup to identify the web site which is being accessed.
-                            </p>
-                            <br> -->
                         </div>
                     </div>
                 </div>
                 <div class="down"><a href="#careers"></a></div>
             </section>
 
-            <section id="careers" class="white-background">
+            <section id="careers" class="colored-background">
                 <div class="wrapper">
                     <div id="careerscontainer">
                         <div class="container">
@@ -267,7 +209,7 @@
                                     <h4 id="logo-span">
                                         mquotient
                                     </h4>
-                                    <div>
+                                    <div class="social-links">
                                         <a href="http://www.linkedin.com/company/1948874?trk=tyah" target="_blank">
                                             <img class="social-icon" src="img/social/linkedin.svg" alt="linkedin Account">
                                         </a>
@@ -323,6 +265,34 @@
                 </a>
                 <%});%>
             </script>
+            <script id="googleMapsTemplate" type="text/template">
+                <div>
+                    <address>
+                        <strong>
+                            <span class="m">m</span><span class="q">quotient</span>
+                        </strong>
+                        <br>
+                        407/ Building 2,
+                        <br>
+                        Gera Gardens Condominium,
+                        <br>
+                        7-A Koregaon Park,
+                        <br>
+                        North Main Road,
+                        <br>
+                        Pune - 411001
+                        <br>
+                        Landmark: St. Mira College
+                        <br>
+                        <span>P:</span>
+                        + 91 (020) 4120 4763
+                        <br>
+                        <a target="_blank" href="http://goo.gl/maps/qKhfo" title="Click to see this area on Google Maps">
+                            <i class="glyphicon glyphicon-map-marker" style="margin-left: -5px;"></i>View this location on Map
+                        </a>
+                    </address>
+                </div>
+            </script>
             <script>
                 // Append the template
                 $('.employees-group').append(_.template($('#employeesTemplate').html(), {employees: employees}));
@@ -362,7 +332,6 @@
                     <li><a class="goTo" href="#cover" data-id="cover">Home</a></li>
                     <li><a class="goTo" href="#about" data-id="about">About Us</a></li>
                     <li><a class="goTo" href="#products" data-id="products">Products</a></li>
-                    <li><a class="goTo" href="#services" data-id="services">Services</a></li>
                     <li><a class="goTo" href="#solutions" data-id="solutions">Solutions</a></li>
                     <li><a class="goTo" href="#careers" data-id="careers">Careers</a></li>
                     <li><a class="goTo" href="#contactus" data-id="contactus">Contact Us</a></li>
@@ -380,7 +349,6 @@
             <div><a href="#cover" class="btn btn-block pull-right nav-item goTo">Home</a></div>
             <div><a href="#about" class="btn btn-block pull-right nav-item goTo">About Us</a></div>
             <div><a href="#products" class="btn btn-block pull-right nav-item goTo">Products</a></div>
-            <div><a href="#services" class="btn btn-block pull-right nav-item goTo">Services</a></div>
             <div><a href="#solutions" class="btn btn-block pull-right nav-item goTo">Solutions</a></div>
             <div><a href="#careers" class="btn btn-block pull-right nav-item goTo">Careers</a></div>
             <div><a href="#contactus" class="btn btn-block pull-right nav-item goTo">Contact Us</a></div>
