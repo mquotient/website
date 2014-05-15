@@ -315,7 +315,7 @@ ol,
 .page-txt p {
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 0 20px 20px;
+  padding: 0 0 20px;
 }
 
 #about .col-sm-6 {
