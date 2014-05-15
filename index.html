@@ -12,7 +12,6 @@
         <script src="js/bootstrap.js"></script>
         <script src="js/underscore.js"></script>
         <script src="js/application.js"></script>
-        <script src="js/snap.svg-min.js"></script>
         <script src="js/employees.js"></script>
         <title>MQuotient</title>
     </head>
@@ -61,7 +60,7 @@
                         </div>
                         <br>
                         <div class="container">
-                            <div class="employees-group grid" id="grid"></div>
+                            <div class="employees-group rows-fluid"></div>
                         </div>
                     </div>
                 </div>
@@ -241,26 +240,35 @@
 
             <script id="employeesTemplate" type="text/template">
                 <%_.forEach(employees, function (employee, index) {%>
-                <a href="#" data-path-hover="M 180,160 0,218 0,0 180,0 z">
-                    <figure>
+                <div class="profile-card col-md-3 col-sm-6 col-xs-12">
+                    <div class="profile-image">
                         <img alt="<%= employee.name %>'s Avatar" src="img/profiles/<%= employee.shortname %>.jpg" />
-                        <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 180,50 -180,0 L 0,0 180,0 z"/></svg>
-                        <figcaption>
-                            <h2><%=employee.name%></h2>
-                            <p class="para-position"><%= employee.position %></p>
-                            <p class="social-info">
-                                <img width="32" height="32" src="img/social/linkedin-rect.svg" alt="linkedin Account"/>
-                                <img width="32" height="32" src="img/social/twitter-rect.svg" alt="twitter Account"/>
-
-                                <% if (employee.github) { %>
+                    </div>
+                    <div class="profile-desc">
+                        <span class="name"><%=employee.name%></span>
+                        <span class="title"><%= employee.position %></span>
+                        <div class="social-info">
+                            <% if (employee.linkedin) { %>
+                                <a target="_blank" href="<%= employee.linkedin %>">
+                                    <img width="32" height="32" src="img/social/linkedin-rect.svg" alt="linkedin Account"/>
+                                </a>
+                            <% } %>
+                            <% if (employee.twitter) { %>
+                                <a target="_blank" href="<%= employee.twitter %>">
+                                    <img width="32" height="32" src="img/social/twitter-rect.svg" alt="twitter Account"/>
+                                </a>
+                            <% } %>
+                            <% if (employee.github) { %>
+                                <a target="_blank" href="<%= employee.github %>">
                                     <img width="32" height="32" src="img/social/github-rect.svg" alt="github Account" />
-                                <% } %>
-                            </p>
-                        </figcaption>
-                    </figure>
-                </a>
+                                </a>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
                 <%});%>
             </script>
+
             <script id="googleMapsTemplate" type="text/template">
                 <div>
                     <address>
@@ -292,33 +300,6 @@
             <script>
                 // Append the template
                 $('.employees-group').append(_.template($('#employeesTemplate').html(), {employees: employees}));
-
-                // Apply hover effect on employe card
-                (function () {
-                    function init() {
-                        var speed = 250,
-                            easing = mina.easeinout;
-
-                        [].slice.call(document.querySelectorAll('#grid > a')).forEach(function (el) {
-                            var s = Snap(el.querySelector('svg')), path = s.select('path'),
-                                pathConfig = {
-                                    from : path.attr('d'),
-                                    to : el.getAttribute('data-path-hover')
-                                };
-
-                            el.addEventListener('mouseenter', function () {
-                                path.animate({ 'path' : pathConfig.to }, speed, easing);
-                            });
-
-                            el.addEventListener('mouseleave', function () {
-                                path.animate({ 'path' : pathConfig.from }, speed, easing);
-                            });
-                        });
-                    }
-
-                    init();
-
-                })();
             </script>
         </div>
 

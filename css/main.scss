@@ -456,242 +456,48 @@ i.glyphicon {
     opacity: 0.7;
 }
 
-/* Profile Card Start  */
-.our-team {
-    text-align: center;
-    font-size: 2em;
-    font-weight: 300;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ddd;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.card {
-    position: relative;
-    margin-bottom: 15px;
-    max-width: 200px;
-    border: 1px solid #ddd;
-}
-
-custom-profile-image-div,
-.custom-profile-image {
-    width: 100%;
-}
-
 .employees-group {
     margin: 0 auto;
-}
 
-.profile-template {
-    margin-bottom: 1em;
-}
-
-.profile-info {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-right: 5px;
-    margin-top: 5px;
-}
-
-.custom-profile-info {
-    padding: 10px 5px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    height: 100%;
-}
-
-.designation {
-    font-size: .8em;
-}
-
-
-.grid {
-    margin: 40px;
-
-    > a {
-        float: left;
-        width: 25%;
-        color: #333;
-    }
-
-    figure {
-        position: relative;
-        overflow: hidden;
-        margin: 5px;
-        background: #ddd;
-        border: 1px solid #ddd;
-
-        .social-info {
-            margin-top: 5px;
-
-            img {
-                display: inline-block;
-                width: auto;
-            }
-        }
-
-        > img {
-            position: relative;
-            display: block;
-            width: 100%;
-            opacity: 0.8;
-            padding-top: 30px;
-            -webkit-transition: opacity 0.3s;
-            transition: opacity 0.3s;
-        }
-
-        button {
-            position: absolute;
-            padding: 4px 20px;
-            border: none;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: bold;
-            -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-            transition: opacity 0.3s, transform 0.3s;
-        }
-    }
-
-    figcaption {
-        position: absolute;
-        top: 0;
-        z-index: 11;
-        padding: 10px;
+    .profile-image img {
         width: 100%;
-        height: 100%;
+    }
+
+    .profile-desc {
+        padding: 10px 5px;
+        background: #F4F4F4;
         text-align: center;
 
-        h2 {
-            margin: 0 0 20px 0;
-            color: #3498db;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 300;
-            font-size: 130%;
-            -webkit-transition: -webkit-transform 0.3s;
-            transition: transform 0.3s;
+        .name {
+            font-size: 1.4em;
         }
 
-        p {
-            padding: 0 20px;
-            color: #aaa;
-            font-weight: 300;
-            -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-            transition: opacity 0.3s, transform 0.3s;
+        .name,
+        .title {
+            display: block;
+        }
 
-            &.para-position {
-                line-height: 1em;
+        img {
+            -webkit-transition: .2s all;
+            -moz-transition: .2s all;
+            -ms-transition: .2s all;
+            transition: .2s all;
+
+            &:hover {
+                transform: scale(1.1);
+                -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                -ms-transform: scale(1.1);
             }
         }
-
-        h2,
-        p {
-            -webkit-transform: translateY(50px);
-            transform: translateY(50px);
-        }
     }
 
-    figcaption,
-    figcaption h2,
-    figcaption p,
-    figure button {
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-    }
 
-    /* Style for SVG */
-    svg {
-        position: absolute;
-        top: -1px; /* fixes rendering issue in FF */
-        z-index: 10;
-        width: 100%;
-        height: 100%;
-    }
-
-    svg path {
-        fill: #fff;
-    }
-
-    a figcaption {
-         h2 {
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
-        }
-
-        p {
-            opacity: 0;
-        }
-    }
-
-    /* Hover effects */
     a:hover {
-        figure img {
-            opacity: 1;
-        }
-
-        figcaption p {
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
-        }
-
-        figcaption p {
-            opacity: 1;
-        }
+        text-decoration: none;
     }
 }
 
-/* Media Queries */
-/* Let's redefine the width of each anchor and the margins */
-
-@media screen and (max-width: 58em) {
-    .grid a {
-        width: 33.333%;
-    }
-}
-
-@media screen and (max-width: 45em) {
-    .grid {
-        max-width: 500px;
-
-        a {
-            width: 50%;
-        }
-
-        figcaption {
-            h2 {
-                margin-bottom: 0px;
-                -webkit-transform: translateY(30px);
-                transform: translateY(30px);
-            }
-
-            p {
-                margin: 0;
-                padding: 0 10px;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 27em) {
-    .grid {
-        max-width: 250px;
-
-        a {
-            width: 100%;
-        }
-    }
-}
-/* Profile Card End  */
-
-
-.img-polaroid.custom-image-polaroid {
-    padding: 20px;
-    box-shadow: 0 0 1px rgba(0,0,0,.3);
-}
 
 #careerscontainer li {
     margin-left: 20px;
@@ -762,6 +568,12 @@ input:-moz-placeholder { font-family: 'Open Sans', sans-serif; font-size: small 
     }
 }
 
+@media (min-width: 691px) and (max-width: 992px) {
+    .profile-desc {
+        min-height: 120px;
+    }
+}
+
 @media (min-width: 526px) and (max-width: 767px) {
     body {
         font-size: 12px;
@@ -783,19 +595,6 @@ input:-moz-placeholder { font-family: 'Open Sans', sans-serif; font-size: small 
         float: left;
     }
 }
-
-@media (min-width: 721px) and (max-width: 1191px) {
-    .grid figure > img {
-        padding-top: 25px;
-    }
-}
-
-@media (min-width: 929px) and (max-width: 991px) {
-    .grid figcaption {
-        padding-top: 3px;
-    }
-}
-
 
 /* span width to 48% on low resolution devices */
 @media (min-width: 671px) {

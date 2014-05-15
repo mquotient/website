@@ -402,207 +402,38 @@ i.glyphicon {
   opacity: 0.7;
 }
 
-/* Profile Card Start  */
-.our-team {
-  text-align: center;
-  font-size: 2em;
-  font-weight: 300;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #ddd;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.card {
-  position: relative;
-  margin-bottom: 15px;
-  max-width: 200px;
-  border: 1px solid #ddd;
-}
-
-custom-profile-image-div,
-.custom-profile-image {
-  width: 100%;
-}
-
 .employees-group {
   margin: 0 auto;
 }
-
-.profile-template {
-  margin-bottom: 1em;
+.employees-group .profile-image img {
+  width: 100%;
 }
-
-.profile-info {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-right: 5px;
-  margin-top: 5px;
-}
-
-.custom-profile-info {
+.employees-group .profile-desc {
   padding: 10px 5px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  height: 100%;
-}
-
-.designation {
-  font-size: .8em;
-}
-
-.grid {
-  margin: 40px;
-  /* Style for SVG */
-  /* Hover effects */
-}
-.grid > a {
-  float: left;
-  width: 25%;
-  color: #333;
-}
-.grid figure {
-  position: relative;
-  overflow: hidden;
-  margin: 5px;
-  background: #ddd;
-  border: 1px solid #ddd;
-}
-.grid figure .social-info {
-  margin-top: 5px;
-}
-.grid figure .social-info img {
-  display: inline-block;
-  width: auto;
-}
-.grid figure > img {
-  position: relative;
-  display: block;
-  width: 100%;
-  opacity: 0.8;
-  padding-top: 30px;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-.grid figure button {
-  position: absolute;
-  padding: 4px 20px;
-  border: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: bold;
-  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-  transition: opacity 0.3s, transform 0.3s;
-}
-.grid figcaption {
-  position: absolute;
-  top: 0;
-  z-index: 11;
-  padding: 10px;
-  width: 100%;
-  height: 100%;
+  background: #F4F4F4;
   text-align: center;
 }
-.grid figcaption h2 {
-  margin: 0 0 20px 0;
-  color: #3498db;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 300;
-  font-size: 130%;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
+.employees-group .profile-desc .name {
+  font-size: 1.4em;
 }
-.grid figcaption p {
-  padding: 0 20px;
-  color: #aaa;
-  font-weight: 300;
-  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-  transition: opacity 0.3s, transform 0.3s;
+.employees-group .profile-desc .name,
+.employees-group .profile-desc .title {
+  display: block;
 }
-.grid figcaption p.para-position {
-  line-height: 1em;
+.employees-group .profile-desc img {
+  -webkit-transition: .2s all;
+  -moz-transition: .2s all;
+  -ms-transition: .2s all;
+  transition: .2s all;
 }
-.grid figcaption h2,
-.grid figcaption p {
-  -webkit-transform: translateY(50px);
-  transform: translateY(50px);
+.employees-group .profile-desc img:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
 }
-.grid figcaption,
-.grid figcaption h2,
-.grid figcaption p,
-.grid figure button {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-.grid svg {
-  position: absolute;
-  top: -1px;
-  /* fixes rendering issue in FF */
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-}
-.grid svg path {
-  fill: #fff;
-}
-.grid a figcaption h2 {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-}
-.grid a figcaption p {
-  opacity: 0;
-}
-.grid a:hover figure img {
-  opacity: 1;
-}
-.grid a:hover figcaption p {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-}
-.grid a:hover figcaption p {
-  opacity: 1;
-}
-
-/* Media Queries */
-/* Let's redefine the width of each anchor and the margins */
-@media screen and (max-width: 58em) {
-  .grid a {
-    width: 33.333%;
-  }
-}
-@media screen and (max-width: 45em) {
-  .grid {
-    max-width: 500px;
-  }
-  .grid a {
-    width: 50%;
-  }
-  .grid figcaption h2 {
-    margin-bottom: 0px;
-    -webkit-transform: translateY(30px);
-    transform: translateY(30px);
-  }
-  .grid figcaption p {
-    margin: 0;
-    padding: 0 10px;
-  }
-}
-@media screen and (max-width: 27em) {
-  .grid {
-    max-width: 250px;
-  }
-  .grid a {
-    width: 100%;
-  }
-}
-/* Profile Card End  */
-.img-polaroid.custom-image-polaroid {
-  padding: 20px;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+.employees-group a:hover {
+  text-decoration: none;
 }
 
 #careerscontainer li {
@@ -686,6 +517,11 @@ input:-moz-placeholder {
     float: left;
   }
 }
+@media (min-width: 691px) and (max-width: 992px) {
+  .profile-desc {
+    min-height: 120px;
+  }
+}
 @media (min-width: 526px) and (max-width: 767px) {
   body {
     font-size: 12px;
@@ -703,16 +539,6 @@ input:-moz-placeholder {
 
   .col-md-3 {
     float: left;
-  }
-}
-@media (min-width: 721px) and (max-width: 1191px) {
-  .grid figure > img {
-    padding-top: 25px;
-  }
-}
-@media (min-width: 929px) and (max-width: 991px) {
-  .grid figcaption {
-    padding-top: 3px;
   }
 }
 /* span width to 48% on low resolution devices */
