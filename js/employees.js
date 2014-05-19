@@ -1,5 +1,5 @@
 var employees = [
-	{ "name": "Rishi", "surname": "Behal", "position": "Founder & CEO", "shortname": "rishi", "linkedin": "http://www.linkedin.com/in/rishibehal"},
+	{ "name": "Rishi", "surname": "Behal", "position": "Founder & Director", "shortname": "rishi", "linkedin": "http://www.linkedin.com/in/rishibehal"},
 	{ "name": "Sreejith", "surname": "Narayanan", "position": "Founder & Chief Scientist", "shortname": "sreejith", "linkedin": "http://in.linkedin.com/in/sreejithnarayanan", "twitter": "http://twitter.com/sreejithhere", "github": "http://github.com/sreejith-mq"},
 	{ "name": "Satyajit", "surname": "Ranjeev", "position": "Team Leader", "shortname": "satyajit", "linkedin": "http://www.linkedin.com/in/satyajitranjeev", "twitter": "http://twitter.com/satyajitranjeev", "github": "http://github.com/satyajit-mq"},
 	{ "name": "Yati", "surname": "Sagade", "position": "Product Manager", "shortname": "yati", "linkedin": "http://in.linkedin.com/pub/yati-sagade/3b/b66/861", "twitter": "https://twitter.com/yati_itay", "github": "http://github.com/yati-mq"},
