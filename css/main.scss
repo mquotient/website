@@ -285,11 +285,11 @@ section {
 
 #cover {
     background-color: #F8F8F8;
-    background: -webkit-linear-gradient(top, #FFF 50%, $main-background-color 50%);
-    background: -moz-linear-gradient(top, white 50%, $main-background-color 50%);
-    background: -o-linear-gradient(top, white 50%, $main-background-color 50%);
-    background: -ms-linear-gradient(top, white 50%, $main-background-color 50%);
-    background: linear-gradient(top, white 50%, $main-background-color 50%);
+    background: -webkit-linear-gradient(top, #FFF 50%, adjust-color($logo-quotient-color, $alpha: -0.3) 50%);
+    background: -moz-linear-gradient(top, white 50%, adjust-color($logo-quotient-color, $alpha: -0.3) 50%);
+    background: -o-linear-gradient(top, white 50%, adjust-color($logo-quotient-color, $alpha: -0.3) 50%);
+    background: -ms-linear-gradient(top, white 50%, adjust-color($logo-quotient-color, $alpha: -0.3) 50%);
+    background: linear-gradient(top, white 50%, adjust-color($logo-quotient-color, $alpha: -0.3) 50%);
 
     h1 {
         float: left;
@@ -310,7 +310,7 @@ section {
     a {
         color: white;
         &:hover {
-            color: black;
+            color: $logo-quotient-color;
             background-color: white;
         }
     }

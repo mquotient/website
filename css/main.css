@@ -248,11 +248,11 @@ section {
 
 #cover {
   background-color: #F8F8F8;
-  background: -webkit-linear-gradient(top, white 50%, rgba(51, 102, 153, 0.7) 50%);
-  background: -moz-linear-gradient(top, white 50%, rgba(51, 102, 153, 0.7) 50%);
-  background: -o-linear-gradient(top, white 50%, rgba(51, 102, 153, 0.7) 50%);
-  background: -ms-linear-gradient(top, white 50%, rgba(51, 102, 153, 0.7) 50%);
-  background: linear-gradient(top, white 50%, rgba(51, 102, 153, 0.7) 50%);
+  background: -webkit-linear-gradient(top, white 50%, rgba(116, 139, 150, 0.7) 50%);
+  background: -moz-linear-gradient(top, white 50%, rgba(116, 139, 150, 0.7) 50%);
+  background: -o-linear-gradient(top, white 50%, rgba(116, 139, 150, 0.7) 50%);
+  background: -ms-linear-gradient(top, white 50%, rgba(116, 139, 150, 0.7) 50%);
+  background: linear-gradient(top, white 50%, rgba(116, 139, 150, 0.7) 50%);
 }
 #cover h1 {
   float: left;
@@ -272,7 +272,7 @@ section {
   color: white;
 }
 #cover a:hover {
-  color: black;
+  color: #748b96;
   background-color: white;
 }
 
