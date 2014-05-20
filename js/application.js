@@ -151,9 +151,11 @@ $(document).ready(function () {
 // Load Google Maps
 function initializeMaps() {
 	var ourLocation = new google.maps.LatLng(18.53585, 73.885988);
+	var isTouchDevice = 'ontouchstart' in document.documentElement;
 	var mapOptions = {
 		zoom: 13,
 		center: ourLocation,
+		draggable: !isTouchDevice,	// Don't allow dragging on touch devices
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	};
 	var map = new google.maps.Map(document.getElementById("map"), mapOptions);
@@ -171,12 +173,6 @@ function initializeMaps() {
 
 	google.maps.event.addListener(marker, 'click', function () {
 		infowindow.open(map, marker);
-	});
-
-	google.maps.event.addListenerOnce(map, 'idle', function () {
-		$('.gmnoprint:last').remove();
-		$('.gmnoprint:first').remove();
-		$('.gmnoprint:first').remove();
 	});
 }
 
