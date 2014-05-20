@@ -3,7 +3,7 @@ var sectionHeight = 600;
 function resizePages() {
 	var h = $(window).height();
 	sectionHeight  =  h < 600 ? 600 : h;
-	
+
 	// Each sections height
 	$('section#cover').css('height', sectionHeight);
 	$('section').css('min-height', sectionHeight);
@@ -54,10 +54,10 @@ $(document).ready(function () {
 		}
 
 		event.preventDefault();
-		
+
 		var target = this.hash,
 			$target = $(target);
-		
+
 		$(scrollElement).stop().animate({
 			'scrollTop': $target.offset().top
 		}, 300, 'swing', function () {
@@ -82,7 +82,7 @@ $(document).ready(function () {
 	}
 
 	var menuBtn = document.getElementById("menu-btn");
-	
+
 	menuBtn.onclick = function () {
 		if ($navItem.first().hasClass('shown')) {
 			hideMenu();
