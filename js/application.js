@@ -1,44 +1,65 @@
-var sectionHeight = 600;
+var scrollElement = 'html, body';
+var minSectionHeight = 600;
+var menuHeight = 60;
+var downButtonHeight = 80;
 
 function resizePages() {
 	var h = $(window).height();
-	sectionHeight  =  h < 600 ? 600 : h;
+	minSectionHeight  =  h < minSectionHeight ? minSectionHeight : h;
 
 	// Each sections height
-	$('section#cover').css('height', sectionHeight);
-	$('section').css('min-height', sectionHeight);
-	$('.wrapper:not(:last-child)').each(function () {
-		$(this).css('min-height', $(this).closest('section').height() - 100);
+	$('section#cover').css('height', minSectionHeight);
+	$('section#cover .wrapper').css('min-height', minSectionHeight);
+
+	$('section').css('min-height', minSectionHeight - menuHeight);
+	$('.section .wrapper').each(function () {
+		if (this.parentElement.id === "contactus") {
+			// Map section wrapper
+			$(this).css('min-height', minSectionHeight - menuHeight);
+		} else {
+			// Other section wrappers excluding cover page
+			$(this).css('min-height', minSectionHeight - (downButtonHeight + menuHeight));
+		}
 	});
 
-	$('.wrapper:last-child').each(function () {
-		$(this).css('min-height', $(this).closest('section').height());
-	});
-
-	// Home Page height adjust
+	// Height adjust on cover page
 	var bodyFontSize = $('body').css('font-size').slice(0, 2);
 	var mquotientFontSize = bodyFontSize * 8;
-	$('#covercontainer h1').css('padding-top', sectionHeight / 2 - (mquotientFontSize * 1.3));
-	$('#covercontainer .navcontainer').css('padding-top', sectionHeight / 2 + 10);
-
+	$('#logo').css('padding-top', minSectionHeight / 2 - (mquotientFontSize * 1.3));
+	$('#menu').css('top', minSectionHeight / 2 + 10);
 
 	// Make map full of height
 	var $contactUsContainer = $('#contactuscontainer');
 	$('#map').height($('#map').height() + $contactUsContainer.parent().height() - $contactUsContainer.height());
 }
 
-$(window).load(function () {
-	$('section:not(:first,:last, #team, #about)').each(function () {
-		var remainingSpace = $('#' + this.id + ' .wrapper').height() - $('#' + this.id + 'container').height(),
-			marginTop = remainingSpace / 2;
+function goToSection (url) {
+	var sectionId = url.split("#")[1];
 
-		$('#' + this.id + 'container').css('margin-top', marginTop + 'px');
+	if (!sectionId) return;
+
+	var sectionTag = $('section#' + sectionId);
+	sectionTag.removeClass('hide');
+	var newTop = sectionTag.offset().top - 60;
+
+	$(scrollElement).stop().animate({
+		'scrollTop': newTop
+	}, 300, 'swing', function () {
+		window.location.hash = sectionId;
 	});
+}
 
-});
+$(window).scroll(_.throttle(function () {
+    var top = $(document).scrollTop();
+	// Shift navigation element to top
+	if (top >= (minSectionHeight / 2)) {
+		$("#menu").attr("active", "section");
+	} else {
+		$("#menu").removeAttr("active");
+	}
+}, 100));
 
 $(document).ready(function () {
-	var scrollElement = 'html, body';
 	$('html, body').each(function () {
 		var initScrollTop = $(this).attr('scrollTop');
 		$(this).attr('scrollTop', initScrollTop + 1);
@@ -48,49 +69,20 @@ $(document).ready(function () {
 			return false;
 		}
 	});
-	$(".down a, .goTo").click(function (event) {
-		if ($(this).hasClass('nav-item')) {
-			hideMenu();
-		}
 
+	window.onhashchange = function(event) {
 		event.preventDefault();
 
-		var target = this.hash,
-			$target = $(target);
-
-		$(scrollElement).stop().animate({
-			'scrollTop': $target.offset().top
-		}, 300, 'swing', function () {
-			window.location.hash = target;
-		});
-	});
-
-	var $navItem = $('.nav-item');
-
-	function hideMenu() {
-		$navItem.each(function () {
-			$(this).removeClass('shown');
-		});
-		$("#floating-menu .menu-btn").removeClass('shown');
-	}
-
-	function showMenu() {
-		$navItem.each(function () {
-			$(this).addClass('shown');
-		});
-		$("#floating-menu .menu-btn").addClass('shown');
-	}
-
-	var menuBtn = document.getElementById("menu-btn");
-
-	menuBtn.onclick = function () {
-		if ($navItem.first().hasClass('shown')) {
-			hideMenu();
-		}
-		else {
-			showMenu();
-		}
+		$('.section').addClass('hide');
+		goToSection(event.newURL);
 	};
+
+	$(".goToSection").on('click', function(event) {
+		if (window.location.href === event.target.href) {
+			goToSection(window.location.href);
+			event.preventDefault();
+		}
+	});
 
 	//resize
 	$(window).resize(function () {
@@ -99,53 +91,7 @@ $(document).ready(function () {
 
 	resizePages();
 
-	//scroll
-	$(window).scroll(_.throttle(function () {
-        var top = $(document).scrollTop();
-		// Shift navigation element to top
-		if (top >= (sectionHeight / 2 + $('.navcontainer').height())) {
-			if ($(window).width() <= 768) {
-				$("#floating-menu").fadeIn();
-			} else {
-				$('#menu').css({
-					opacity: 1,
-					top: -1
-				});
-			}
-		}
-		else {
-			if ($(window).width() <= 768) {
-				$("#floating-menu").fadeOut();
-			}
-			else {
-				$('#menu').css({
-					opacity: 0,
-					top: -30
-				});
-			}
-		}
-
-		$('section:not(:last)').each(function () {
-			if ((pageYOffset + 200) >= this.offsetTop && (pageYOffset + 200) < $(this).next()[0].offsetTop) {
-				var self = this;
-				$('#menu li a:not(:first)').each(function () {
-					if ($(this).data('id') == self.id) {
-						$('#menu .active').removeClass('active').parent().removeClass('active');
-						$(this).addClass('active').parent().addClass('active');
-					}
-				});
-			}
-		});
-
-		if ((pageYOffset + 200) > $('section:last')[0].offsetTop) {
-			$('#menu .active').removeClass('active').parent().removeClass('active');
-			$('#menu a[data-id="contactus"]').addClass('active').parent().addClass('active');
-		}
-    }, 100));
-
-	if ($(window).width() <= 768) {
-		$("#floating-menu").hide();
-	}
+	goToSection(window.location.href);
 });
 
 // Load Google Maps
@@ -165,7 +111,7 @@ function initializeMaps() {
 		position: ourLocation
 	});
 
-	var contentString = $("#googleMapsTemplate").html();
+	var contentString = $("#addressTemplate").html();
 
 	var infowindow = new google.maps.InfoWindow({
 		content: contentString
