@@ -1,7 +1,7 @@
 var scrollElement = 'html, body';
 var minSectionHeight = 600;
-var menuHeight = 60;
-var downButtonHeight = 80;
+var menuHeight = $("#menu").innerHeight();
+var logoHeight = $("#logo").height();
 
 function resizePages() {
 	var h = $(window).height();
@@ -13,19 +13,12 @@ function resizePages() {
 
 	$('section').css('min-height', minSectionHeight - menuHeight);
 	$('.section .wrapper').each(function () {
-		if (this.parentElement.id === "contactus") {
-			// Map section wrapper
-			$(this).css('min-height', minSectionHeight - menuHeight);
-		} else {
-			// Other section wrappers excluding cover page
-			$(this).css('min-height', minSectionHeight - (downButtonHeight + menuHeight));
-		}
+		$(this).css('min-height', minSectionHeight - menuHeight);
 	});
 
 	// Height adjust on cover page
 	var bodyFontSize = $('body').css('font-size').slice(0, 2);
-	var mquotientFontSize = bodyFontSize * 8;
-	$('#logo').css('padding-top', minSectionHeight / 2 - (mquotientFontSize * 1.3));
+	$('#logo').css('padding-top', minSectionHeight / 2 - (logoHeight * 1.3));
 	$('#menu').css('top', minSectionHeight / 2 + 10);
 
 	// Make map full of height
@@ -40,13 +33,16 @@ function goToSection (url) {
 
 	var sectionTag = $('section#' + sectionId);
 	sectionTag.removeClass('hide');
-	var newTop = sectionTag.offset().top - 60;
+	var newTop = sectionTag.offset().top - menuHeight;
 
 	$(scrollElement).stop().animate({
 		'scrollTop': newTop
-	}, 300, 'swing', function () {
-		window.location.hash = sectionId;
-	});
+	}, 300, 'swing');
+
+	// if it is map section initialize map
+	if (sectionId === "contactus") {
+		initializeMaps();
+	}
 }
 
 $(window).scroll(_.throttle(function () {
@@ -96,6 +92,22 @@ $(document).ready(function () {
 
 // Load Google Maps
 function initializeMaps() {
+	// Adjust the map container height
+	var sectionWrapper = $("#contactus .wrapper");
+	var sectionWrapperHeight = sectionWrapper.height();
+	var blankSpaceHeight = sectionWrapperHeight - sectionWrapper.children().height();
+
+	$("#map").height($("#map").height() + blankSpaceHeight);
+
+	if (typeof google === "undefined") {
+		loadMaps();
+		return;
+	}
+
+	renderMaps();
+}
+
+function renderMaps () {
 	var ourLocation = new google.maps.LatLng(18.53585, 73.885988);
 	var isTouchDevice = 'ontouchstart' in document.documentElement;
 	var mapOptions = {
@@ -123,9 +135,10 @@ function initializeMaps() {
 }
 
 function loadMaps() {
+	if (typeof google !== "undefined") return;
 	var script = document.createElement("script");
 	script.type = "text/javascript";
-	script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAFWFw3Rdf7fBuvwo4DTUV2DcTD5W7tBWc&sensor=true&callback=initializeMaps";
+	script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAFWFw3Rdf7fBuvwo4DTUV2DcTD5W7tBWc&sensor=true&callback=renderMaps";
 	document.body.appendChild(script);
 }
 

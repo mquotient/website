@@ -11,6 +11,11 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, blockquote,
   border: 0;
 }
 
+::selection {
+  background: #000;
+  color: white;
+}
+
 body {
   margin: 0 auto;
   -webkit-tap-highlight-color: rgba(232, 76, 56, 0.38);
@@ -59,46 +64,12 @@ section {
   padding: 0 !important;
 }
 
-.container {
-  max-width: 1000px;
-}
-
 .wrapper {
   padding: 40px 20px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-.down {
-  width: 100%;
-  height: 80px;
-  background-color: #E9E9E9;
-}
-.down a {
-  margin: 0 auto;
-  position: absolute;
-  left: 50%;
-  margin-left: -16px;
-  background-image: url(../img/down.svg);
-  width: 64px;
-  height: 64px;
-  background-size: 32px 32px;
-  background-repeat: no-repeat;
-  background-position: center;
-  -webkit-transition: all .1s ease-in-out;
-  -moz-transition: all .1s ease-in-out;
-  -o-transition: all .1s ease-in-out;
-  -ms-transition: all .1s ease-in-out;
-  transition: all .1s ease-in-out;
-}
-.down a:hover {
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
 }
 
 .colored-background {
@@ -118,10 +89,17 @@ section {
   position: fixed;
   top: 0 !important;
   padding: 10px 0;
-  background-color: #748b96;
+  background-color: #cd0f45;
 }
 #menu[active="section"] li {
-  border-right: 1px solid #748b96;
+  padding-right: 20px;
+}
+#menu[active="section"] li.home {
+  display: table-cell;
+}
+#menu[active="section"] a:hover {
+  background-color: rgba(29, 29, 29, 0.5);
+  color: white;
 }
 #menu ul {
   margin: 0 auto;
@@ -130,7 +108,6 @@ section {
   text-align: center;
   line-height: 28px;
   display: table;
-  background: #5F5F5F;
 }
 #menu ul li {
   display: table-cell;
@@ -143,21 +120,18 @@ section {
 #menu ul li:last-child {
   border-right: 0;
 }
+#menu ul li.home {
+  display: none;
+}
 #menu ul li a {
   padding: 5px 10px;
   text-decoration: none;
   display: block;
   font-size: 1.1em;
+  color: #FFF;
 }
 #menu ul li a:hover {
-  color: #748b96;
-  background-color: white;
-}
-#menu ul li p {
-  display: none;
-  max-width: 200px;
-}
-#menu ul li a, #menu ul li p {
+  background-color: rgba(214, 214, 214, 0.65);
   color: white;
 }
 
@@ -172,7 +146,7 @@ section {
 }
 
 #cover {
-  background: url(../img/bg.jpg) no-repeat center center fixed;
+  background: url(../img/glyph-medium-res.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -205,22 +179,20 @@ section {
 }
 
 .section-heading {
-  text-align: center;
+  margin-top: 20px;
+  font-size: 2.4em;
+  line-height: 1.5em;
+  font-weight: 300;
+  text-align: right;
+  background: #000;
+  color: #FFF;
+  padding: 10px;
 }
 
 ol,
 .para-description {
   line-height: 1.7em;
   font-size: 1.2em;
-}
-
-.saperator {
-  content: '';
-  background: url(../img/separator.png) center center no-repeat;
-  display: block;
-  margin: 0 auto;
-  height: 30px;
-  margin-top: 40px;
 }
 
 .page-txt {
@@ -237,12 +209,6 @@ ol,
 
 #about .col-sm-6 {
   padding-top: 1em;
-}
-
-h1.section-heading {
-  font-size: 2.4em;
-  line-height: 1em;
-  font-weight: 300;
 }
 
 #contactus .wrapper {
@@ -294,9 +260,13 @@ h1.section-heading {
 #map img {
   max-width: none;
 }
+#map * {
+  border-radius: 0 !important;
+}
 
 .map-container {
-  box-shadow: 0 0 3px rgba(37, 37, 37, 0.25);
+  box-shadow: 0 0 1px rgba(37, 37, 37, 0.25);
+  border-top: 1px solid #CFCFCF;
 }
 
 .custom-span {
@@ -322,6 +292,7 @@ i.glyphicon {
   text-align: center;
   margin-top: 10px;
   border-radius: 0 10px;
+  min-height: 125px;
 }
 .employees-group .profile-desc .name {
   font-size: 1.4em;
@@ -410,22 +381,30 @@ input:-moz-placeholder {
     font-size: 1em;
   }
 
+  #cover {
+    background-image: url(../img/glyph-low-res.jpg);
+  }
   #cover h1 {
     font-size: 7em;
   }
+
+  #menu ul li a {
+    padding: 5px;
+  }
+  #menu li.home {
+    display: none;
+  }
+  #menu[active="section"] li {
+    padding-right: 0;
+  }
+  #menu[active="section"] li.home {
+    display: none;
+  }
 }
 @media (min-width: 691px) {
-  .col-md-3 {
+  .profile-card {
     width: 25%;
-  }
-
-  .col-md-3 {
     float: left;
-  }
-}
-@media (min-width: 691px) and (max-width: 992px) {
-  .profile-desc {
-    min-height: 125px;
   }
 }
 @media (min-width: 526px) and (max-width: 767px) {
@@ -437,17 +416,22 @@ input:-moz-placeholder {
   body {
     font-size: 11px;
   }
+
+  #menu[active="section"] li {
+    padding-right: 3px;
+  }
 }
 @media (min-width: 420px) and (max-width: 690px) {
-  .col-md-3 {
+  .profile-card {
     width: 50%;
-  }
-
-  .col-md-3 {
     float: left;
   }
 }
-/* span width to 48% on low resolution devices */
+@media (max-width: 350px) {
+  #menu ul li a {
+    padding: 3px;
+  }
+}
 @media (min-width: 671px) {
   #logo-span {
     font-size: 2em;
@@ -466,6 +450,10 @@ input:-moz-placeholder {
     align-content: center;
     justify-content: space-around;
     height: 150px;
+  }
+
+  #cover {
+    background-image: url(../img/glyph-high-res.jpg);
   }
 }
 
