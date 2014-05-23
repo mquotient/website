@@ -1,6 +1,5 @@
 $logo-m-color: #CD0F45;
 $logo-quotient-color: #748B96;
-$lighten-quotient-color: adjust-color($logo-quotient-color, $alpha: -0.3);
 
 $main-background-color: rgba(51, 102, 153, 0.7);
 $main-text-color: #000;
@@ -19,6 +18,7 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,a,blockquote,pre,abbr,addre
     margin: 0;
     padding: 0;
     border: 0;
+    font: 100%/1.5 'Open Sans', sans-serif;
 }
 
 ::selection {
@@ -75,25 +75,18 @@ section {
     box-sizing: border-box;
 }
 
-.colored-background {
-    color: $main-text-color;
-
-    a {
-        color: $main-text-color;
-    }
-}
-
 /* Menu start */
 #menu {
     width: 100%;
     position: absolute;
     z-index: 100;
+    font-size: .8em;
 
     &[active="section"] {
         position: fixed;
         top: 0 !important;
         padding: 10px 0;
-        background-color: $logo-m-color;
+        background-color: black;
 
         li {
             padding-right: 20px;
@@ -104,7 +97,7 @@ section {
         }
 
         a:hover {
-            background-color: rgba(29, 29, 29, 0.5);
+            background-color: rgba(253, 253, 253, 0.5);
             color: white;
         }
     }
@@ -136,9 +129,8 @@ section {
             a {
                 padding: 5px 10px;
                 text-decoration: none;
+                text-transform: uppercase;
                 display: block;
-
-                font-size: 1.1em;
                 color: #FFF;
 
                 &:hover {
@@ -171,7 +163,7 @@ section {
         color: #222;
         font-family: 'trebuc', sans-serif;
         font-weight: 400;
-        font-size: 8em;
+        font-size: 7em;
         text-align: center;
         line-height: 1em;
         letter-spacing: -4px;
@@ -180,15 +172,11 @@ section {
     .wrapper {
         padding: 0px 20px;
         background-color: #F8F8F8;
-        background: -webkit-linear-gradient(top, #FFF 50%, $lighten-quotient-color 50%);
-        background: -moz-linear-gradient(top, white 50%, $lighten-quotient-color 50%);
-        background: -o-linear-gradient(top, white 50%, $lighten-quotient-color 50%);
-        background: -ms-linear-gradient(top, white 50%, $lighten-quotient-color 50%);
-        background: linear-gradient(top, white 50%, $lighten-quotient-color 50%);
-    }
-
-    a {
-
+        background: -webkit-linear-gradient(top, #FFF 50%, transparent 50%);
+        background: -moz-linear-gradient(top, white 50%, transparent 50%);
+        background: -o-linear-gradient(top, white 50%, transparent 50%);
+        background: -ms-linear-gradient(top, white 50%, transparent 50%);
+        background: linear-gradient(top, white 50%, transparent 50%);
     }
 }
 
@@ -198,38 +186,21 @@ section {
 }
 
 .section-heading {
-    margin-top: 20px;
     font-size: 2.4em;
     line-height: 1.5em;
     font-weight: 300;
     text-align: right;
-    background: #000;
-    color: #FFF;
-    padding: 10px;
-}
-
-ol,
-.para-description {
-    line-height: 1.7em;
-    font-size: 1.2em;
+    color: $logo-m-color;
 }
 
 .page-txt {
-    font-size: 1.2em;
-    line-height: 1.5;
     text-align: justify;
-    margin-top: 20px;
+    margin-top: 10px;
 
     p {
         margin: 0 auto;
         box-sizing: border-box;
         padding: 0 0 20px;
-    }
-}
-
-#about {
-    .col-sm-6 {
-        padding-top: 1em;
     }
 }
 
@@ -276,7 +247,7 @@ ol,
         }
     }
 
-    .col-sm-4 {
+    .col-md-4 {
         text-align: center;
         margin-top: 30px;
         margin-bottom: 30px;
@@ -295,6 +266,7 @@ ol,
         max-width: none;
     }
 
+    // We hate border-radius even from external CSS rules
     * {
         border-radius: 0 !important;
     }
@@ -303,10 +275,6 @@ ol,
 .map-container {
     box-shadow: 0 0 1px rgba(37, 37, 37, 0.25);
     border-top: 1px solid #CFCFCF;
-}
-
-.custom-span {
-    margin-bottom: 20px
 }
 
 i.glyphicon {
@@ -327,9 +295,12 @@ i.glyphicon {
         padding: 10px 5px;
         background: #E9E9E9;
         text-align: center;
-        margin-top: 10px;
+        margin: 5px 0 20px;
         border-radius: 0 10px;
-        min-height: 125px;
+        min-height: 140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         .name {
             font-size: 1.4em;
@@ -382,7 +353,6 @@ ul.unstyled {
 
     li {
         line-height: 1.7em;
-        font-size: 1.2em;
     }
 }
 
@@ -390,25 +360,10 @@ ul.unstyled {
     margin-left: 0;
 }
 
-#careerscontainer .small {
-    font-size: 1em;
-}
-
-/* Placeholders */
-::-webkit-input-placeholder { font-family: 'Open Sans' , sans-serif; font-size: small }
-::-moz-placeholder { font-family: 'Open Sans' , sans-serif; font-size: small } /* firefox 19+ */
-:-ms-input-placeholder { font-family: 'Open Sans', sans-serif; font-size: small } /* ie */
-input:-moz-placeholder { font-family: 'Open Sans', sans-serif; font-size: small }
-
-/*Responsive Css*/
+/* Responsive Css */
 @media (max-width: 768px) {
     body {
         font-size: 11px;
-    }
-
-    #covercontainer a {
-        padding: 5px;
-        font-size: 1em;
     }
 
     #cover {
@@ -440,29 +395,6 @@ input:-moz-placeholder { font-family: 'Open Sans', sans-serif; font-size: small 
     }
 }
 
-@media (min-width: 691px) {
-    .profile-card {
-        width: 25%;
-        float: left;
-    }
-}
-
-@media (min-width: 526px) and (max-width: 767px) {
-    body {
-        font-size: 12px;
-    }
-}
-
-@media (max-width: 525px) and (min-width: 480px) {
-    body {
-        font-size: 11px;
-    }
-
-    #menu[active="section"] li {
-        padding-right: 3px;
-    }
-}
-
 @media (min-width: 420px) and (max-width: 690px) {
     .profile-card {
         width: 50%;
@@ -470,7 +402,39 @@ input:-moz-placeholder { font-family: 'Open Sans', sans-serif; font-size: small 
     }
 }
 
-@media (max-width: 350px) {
+@media (min-width: 691px) {
+    .profile-card {
+        width: 25%;
+        float: left;
+    }
+
+    #logo-span {
+        font-size: 2em;
+        line-height:1.4em;
+    }
+}
+
+@media (min-width: 526px) and (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 525px) and (min-width: 480px) {
+    body {
+        font-size: 13px;
+    }
+
+    #menu[active="section"] li {
+        padding-right: 3px;
+    }
+}
+
+@media (max-width: 479px) {
+    body {
+        font-size: 12px;
+    }
+
     #menu {
         ul li a {
             padding: 3px;
@@ -478,15 +442,8 @@ input:-moz-placeholder { font-family: 'Open Sans', sans-serif; font-size: small 
     }
 }
 
-@media (min-width: 671px) {
-    #logo-span {
-        font-size: 2em;
-        line-height:1.4em;
-    }
-}
-
 @media (min-width: 1200px) {
-    #contactuscontainer .col-sm-4 {
+    #contactuscontainer .col-md-4 {
         display: -webkit-box;
         display: -moz-box;
         display: -ms-flexbox;
