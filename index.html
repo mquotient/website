@@ -39,9 +39,7 @@
         </div>
         <section id="cover">
             <div class="wrapper">
-                <div id="covercontainer">
-                    <h1 id="logo"><span class="m">m</span><span class="q">quotient</span></h1>
-                </div>
+                <h1 id="logo"><span class="m">m</span><span class="q">quotient</span></h1>
             </div>
         </section>
 
@@ -139,8 +137,6 @@
                         </p>
                     </div>
 
-                    <br>
-
                     <div class="page-txt">
                         <h3 class="para-heading">Do you fit in?</h3>
                         <p class="para-description no-padding">We are looking for people who like solving the tough problems</p>
@@ -151,11 +147,9 @@
                         </ul>
                         <br>
                         <p class="para-description">
-                            If so, we’d like to hear from you. We’re building outstanding customer experience products and need you to help us build it the right way, drop your resume to  <a href="mailto:careers@mquotient.net">@careers</a>.  Do include samples of you best work if you can.
+                            If so, we’d like to hear from you. We’re building outstanding customer experience products and need you to help us build it the right way, drop your resume to  <a href="mailto:careers@mquotient.net">careers@mquotient.net</a>.  Do include samples of you best work if you can.
                         </p>
                     </div>
-
-                    <br>
 
                     <div class="page-txt">
                         <h3 class="para-heading">What you’d be doing?</h3>
@@ -183,7 +177,7 @@
                 <div id="contactuscontainer">
                     <div class="container">
                         <div class="row">
-                            <div class="col-sm-4">
+                            <div class="col-md-4">
                                 <p class="para-description">
                                     407/ Building 2, Gera Gardens Condominium,
                                     <br>
@@ -192,7 +186,7 @@
                                     Pune - 411001, India
                                 </p>
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-md-4">
                                 <h4 id="logo-span">
                                     mquotient
                                 </h4>
@@ -210,7 +204,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-md-4">
                                 <div>
                                     Email: <a href="mailto:info@mquotient.net">info@mquotient.net</a>
                                 </div>
@@ -238,7 +232,7 @@
 
         <script id="employeesTemplate" type="text/template">
             <%_.forEach(employees, function (employee, index) {%>
-            <div class="profile-card col-md-3 col-sm-6 col-xs-12">
+            <div class="profile-card col-md-3">
                 <div class="profile-image">
                     <img alt="<%= employee.name %>'s Avatar" src="img/profiles/<%= employee.shortname %>.jpg" />
                 </div>
@@ -296,7 +290,7 @@
             </div>
         </script>
         <script>
-            // Append the template
+            // Append the employees template
             $('.employees-group').append(_.template($('#employeesTemplate').html(), {employees: employees}));
         </script>
     </body>
