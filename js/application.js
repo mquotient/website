@@ -140,5 +140,3 @@ function loadMaps() {
 	script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAFWFw3Rdf7fBuvwo4DTUV2DcTD5W7tBWc&sensor=true&callback=renderMaps";
 	document.body.appendChild(script);
 }
-
-window.onload = loadMaps;
