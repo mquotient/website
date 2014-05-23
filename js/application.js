@@ -1,5 +1,5 @@
 var scrollElement = 'html, body';
-var minSectionHeight = 600;
+var minSectionHeight = 500;
 var menuHeight = $("#menu").innerHeight();
 var logoHeight = $("#logo").height();
 
@@ -17,8 +17,7 @@ function resizePages() {
 	});
 
 	// Height adjust on cover page
-	var bodyFontSize = $('body').css('font-size').slice(0, 2);
-	$('#logo').css('padding-top', minSectionHeight / 2 - (logoHeight * 1.3));
+	$('#logo').css('padding-top', minSectionHeight / 2 - logoHeight);
 	$('#menu').css('top', minSectionHeight / 2 + 10);
 
 	// Make map full of height
