@@ -7,6 +7,13 @@ body {
     font-family: "Open Sans", sans-serif;
     background: radial-gradient(circle, #fff 0%, #bbb 85%) no-repeat;
     background: -webkit-radial-gradient(circle, #fff 0%, #bbb 85%) no-repeat;
+    height: 300px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    color: #444;
 }
 
 h1 {
